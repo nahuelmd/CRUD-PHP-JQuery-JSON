@@ -160,3 +160,13 @@ a{
 .prueba{
     background-color: green;
 }
+
+
+/* Tabla Datatables */
+
+
+
+#tablaContactos > tbody > tr:hover{
+    background-color: var(--hoverPrimario);
+    
+}
