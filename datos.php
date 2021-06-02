@@ -8,11 +8,10 @@
 
     for ($i = 0; $i < count($contactos); $i++) {
         $fecha = $contactos[$i]['last_access'];
-        echo  ($fecha) ?> <br> <?php ;
+        //echo  ($fecha) ?> <?php ;
 
     }
     
-    // include 'datos.php';
     foreach ($contactos as $valor ) {
         $contenido = $valor['name'] . $valor['mail'];
         //echo ($contenido);
@@ -36,13 +35,14 @@
   <tbody>
   <?php  for ($i = 0; $i < count($contactos); $i++) {  ?>
     <tr>
-      <th scope="row"><input type="checkbox"></th>
+      <th scope="row"><input type="checkbox" name="lobo" id="lobo"></th>
       <td><?php echo $contactos[$i]['name'] ?></td>
       <td><?php echo $contactos[$i]['mail'] ?></td>
       <td><?php echo $contactos[$i]['company'] ?></td>
       <td><?php echo $contactos[$i]['role'] ?></td>
       <td><?php echo $contactos[$i]['profile_rate'] ?></td>
       <td><?php echo $contactos[$i]['last_access'] ?></td>
+      
       
     </tr>
 
