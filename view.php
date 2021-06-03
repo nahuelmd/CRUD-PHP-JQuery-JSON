@@ -1,4 +1,9 @@
 <?php
+
+include '../saleslayer/partials/header.php';
+
+
+
 require __DIR__.'/users.php';
 
 if(!isset($_GET['mail'])){
@@ -25,9 +30,6 @@ if (!$user){
 
 
 
-<?php
-include '../saleslayer/partials/header.php'
-?>
 
 
     <div class="card">
@@ -48,7 +50,11 @@ include '../saleslayer/partials/header.php'
         </tr>
         <tr>
             <th>Mail</th>
-            <td><?php echo $user['mail'] ?></td>
+            <td>
+                <a href="mailto:<?php echo $user['mail']?>">
+                                <?php echo $user['mail']?>
+                </a>
+            </td>
         </tr>
         <tr>
             <th>Company</th>

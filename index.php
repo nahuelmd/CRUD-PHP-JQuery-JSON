@@ -1,19 +1,15 @@
 <?php
 
+include '../saleslayer/partials/header.php';
+
+
 require 'users.php';
 
 $users = getUsers();
 
 ?>
 
-<?php
-include '../saleslayer/partials/header.php'
-?>
-
 <div class="main-container">
-
-
-
     
     
     <div class="d-flex">
@@ -125,24 +121,15 @@ include '../saleslayer/partials/header.php'
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td> <input type="checkbox"></td>
                         <td><?php echo $user['name'] ?></td>
-                        <td>
-                            <a href="mailto:<?php echo $user['mail']?>">
-                                <?php echo $user['mail']?>
-                            </a>
-                        </td>
-                        <a href=""></a>
-                        
+                        <td><?php echo $user['mail'] ?></td>
                         <td><?php echo $user['company'] ?></td>
                         <td><?php echo $user['role'] ?></td>
                         <td><?php echo $user['profile_rate'] ?></td>
                         <td><?php echo $user['last_access'] ?></td>                        
-                        <td>
-                            <a href="view.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-info">View</a>    
-                            <a href="update.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-secondary">Update</a>    
-                            <a href="delete.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-danger">Delete</a>    
-                        </td>
+                        
+                        
                     </tr>
 
                 <?php endforeach;;?>
@@ -183,9 +170,8 @@ include '../saleslayer/partials/header.php'
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <!-- JS DE DATATABLES -->
     <script src="cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    
 
+</div>
 <?php
 include '../saleslayer/partials/footer.php'
 ?>
-</div>
