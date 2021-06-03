@@ -3,19 +3,19 @@
     $contactos = json_decode($datos, true);
     //echo ($contactos);
 
-    $fecha = $contactos[$i]['last_access'];
-    //echo  ($fecha);
+    // $fecha = $contactos[$i]['last_access'];
+    // //echo  ($fecha);
 
-    for ($i = 0; $i < count($contactos); $i++) {
-        $fecha = $contactos[$i]['last_access'];
-        //echo  ($fecha) ?> <?php ;
+    // for ($i = 0; $i < count($contactos); $i++) {
+    //     $fecha = $contactos[$i]['last_access'];
+    //     //echo  ($fecha) ?> <?php ;
 
-    }
+    // }
     
-    foreach ($contactos as $valor ) {
-        $contenido = $valor['name'] . $valor['mail'];
-        //echo ($contenido);
-    }
+    // foreach ($contactos as $valor ) {
+    //     $contenido = $valor['name'] . $valor['mail'];
+    //     //echo ($contenido);
+    // }
 ?>
 
 

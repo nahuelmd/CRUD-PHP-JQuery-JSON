@@ -1,3 +1,11 @@
+<?php
+
+require 'users.php';
+
+$users = getUsers();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,6 +111,7 @@
                 </div>
             </nav>
         </div>
+
         <div class="prueba">
             <h1>PRUEBA</h1>
         </div>
@@ -114,14 +123,42 @@
         </div>
 
         <?php
-        include 'datos.php';
+        //include 'datos.php';
         ?>
+        <table id="tablaContactos" class="table"  >
+            <thead>
+                <tr>
+                    <th>Seleccionar</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Compañia</th>
+                    <th>Role</th>
+                    <th>Porcentaje</th>
+                    <th>Tiempo desde ultimo acceso</th>
+                </tr>
+            
+            </thead>
+            <tbody>
+                <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><?php echo $user['name'] ?></td>
+                        <td><?php echo $user['mail'] ?></td>
+                        <td><?php echo $user['company'] ?></td>
+                        <td><?php echo $user['role'] ?></td>
+                        <td><?php echo $user['profile_rate'] ?></td>
+                        <td><?php echo $user['last_access'] ?></td>                        
+                    </tr>
+
+                <?php endforeach;;?>
+            </tbody>
+        
+        </table>
+
 
 
 
     </div>
-    
-    
 
 
     
