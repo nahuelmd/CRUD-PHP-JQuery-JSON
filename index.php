@@ -5,17 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-    <link href="/assets/css/styles.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link href="cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" >
+    <link href="/assets/css/styles.css" rel="stylesheet" >
     
 
 
@@ -107,15 +104,14 @@
             <h1>PRUEBA</h1>
         </div>
 
-        <div class="contador-checkbox">
+        <span class="totalchecked">0 selected</span>
 
-        <p id="resultado">ESTE ES EL RESULTADO</p>
 
-        </div>
-
+        <!-- /TABLA -->
         <?php
         include 'datos.php';
         ?>
+        <!-- TERMINA TABLA -->
 
 
 
@@ -131,41 +127,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" ></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js" ></script>
+    
     <script>
         $(document).ready(function() {
         $('#tablaContactos').DataTable();
         } );
     </script>
+ <!-- Muestra cantidad de checkbox marcados -->
+    <script>        
+        $('input[type=checkbox]').change(function(){
+            var number = $('input[type=checkbox]:checked').length;
+            $('.totalchecked').html(number + ' selected'  );
+            
 
-    <script>
-        var contador = 0;
-        
-        $(document).ready(function(){
-            $('#lobo').change(function(){
-                if($(this).prop('checked')) {
-                    // $('#resultado').show();
-                    contador++;
-                    document.getElementById("resultado").innerHTML = contador
-                } else {
-                    // $('#resultado').hide();
-                    --contador;
-                    document.getElementById("resultado").innerHTML = contador
-                }
-                console.log(contador)
-
-            })
-        })
+        });
     </script>
 
 
-
-
-
-
     <!-- JS DE BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- JS DE DATATABLES -->
-    <script src="cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.js"></script>
+
+
 </body>
 </html>

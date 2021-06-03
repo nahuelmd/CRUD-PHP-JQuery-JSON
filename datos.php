@@ -3,6 +3,9 @@
     $contactos = json_decode($datos, true);
     //echo ($contactos);
 
+
+
+
     $fecha = $contactos[$i]['last_access'];
     //echo  ($fecha);
 
@@ -21,7 +24,7 @@
 
 <table id="tablaContactos" class="table">
   <thead>
-    <tr>
+    <tr id="jamon">
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
@@ -34,18 +37,20 @@
 
   <tbody>
   <?php  for ($i = 0; $i < count($contactos); $i++) {  ?>
-    <tr>
-      <th scope="row"><input type="checkbox" name="lobo" id="lobo"></th>
+    <tr id="jamon">
+    
+      <td  scope="row">
+      
+            <input class="seleccionCheckbox" type="checkbox"  name="lobo" id="lobo">
+      
+      </td>
       <td><?php echo $contactos[$i]['name'] ?></td>
       <td><?php echo $contactos[$i]['mail'] ?></td>
       <td><?php echo $contactos[$i]['company'] ?></td>
       <td><?php echo $contactos[$i]['role'] ?></td>
       <td><?php echo $contactos[$i]['profile_rate'] ?></td>
-      <td><?php echo $contactos[$i]['last_access'] ?></td>
-      
-      
+      <td><?php echo $contactos[$i]['last_access'] ?></td>      
     </tr>
-
     <?php } ?>
   </tbody>
 </table>
