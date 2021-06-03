@@ -1,5 +1,6 @@
 <?php
 include '../saleslayer/partials/header.php';
+
 require __DIR__.'/users.php';
 if(!isset($_GET['mail'])){
     // echo "Not found";
@@ -46,3 +47,9 @@ if (!$user){
 
 </form>
 
+
+
+
+<?php
+include '../saleslayer/partials/footer.php';
+?>
