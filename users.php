@@ -9,8 +9,16 @@ function getUsers(){
 
 }
 
-function getUserByMail($mail){
-
+function getUserByMail($mail)
+{
+    $users = getUsers();
+    foreach ($users as $user){
+        if ($user['mail'] ==$mail){
+            return $user;
+        }
+    
+    }
+    return null;
 }
 
 function createUser($data) {

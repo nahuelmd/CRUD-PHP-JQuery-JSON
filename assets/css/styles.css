@@ -16,9 +16,14 @@
 
 }
 body {
+    
+}
+
+.main-container{
     background-color: var(--grisClarofondo);
     display: flex;
     flex-direction: row;
+
 }
 
 .right-side-section{

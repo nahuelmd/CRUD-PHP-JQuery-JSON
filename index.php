@@ -6,30 +6,14 @@ $users = getUsers();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-    <link href="/assets/css/styles.css" rel="stylesheet" >
-    <link href="cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" >
-    
+<?php
+include '../saleslayer/partials/header.php'
+?>
+
+<div class="main-container">
 
 
-    <title>Document</title>
-</head>
-<body>
+
     
     
     <div class="d-flex">
@@ -143,11 +127,22 @@ $users = getUsers();
                     <tr>
                         <td><input type="checkbox"></td>
                         <td><?php echo $user['name'] ?></td>
-                        <td><?php echo $user['mail'] ?></td>
+                        <td>
+                            <a href="mailto:<?php echo $user['mail']?>">
+                                <?php echo $user['mail']?>
+                            </a>
+                        </td>
+                        <a href=""></a>
+                        
                         <td><?php echo $user['company'] ?></td>
                         <td><?php echo $user['role'] ?></td>
                         <td><?php echo $user['profile_rate'] ?></td>
                         <td><?php echo $user['last_access'] ?></td>                        
+                        <td>
+                            <a href="view.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-info">View</a>    
+                            <a href="update.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-secondary">Update</a>    
+                            <a href="delete.php?mail=<?php echo $user['mail'] ?>" class="btn btn-sm btn-outline-danger">Delete</a>    
+                        </td>
                     </tr>
 
                 <?php endforeach;;?>
@@ -189,5 +184,8 @@ $users = getUsers();
     <!-- JS DE DATATABLES -->
     <script src="cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     
-</body>
-</html>
+
+<?php
+include '../saleslayer/partials/footer.php'
+?>
+</div>
