@@ -143,8 +143,8 @@ $users = getUsers();
 
                         <td>
                             <a href="view.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >VIEW</a>
-                            <a href="update.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >UPDATE</a>
-                            <a href="delete.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >DELETE</a>
+                            <a href="update.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-secondary" >UPDATE</a>
+                            <a href="delete.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-danger" >DELETE</a>
                         </td>
                         
                     </tr>
