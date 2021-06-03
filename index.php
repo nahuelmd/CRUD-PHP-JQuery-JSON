@@ -115,6 +115,8 @@ $users = getUsers();
                     <th>Role</th>
                     <th>Porcentaje</th>
                     <th>Tiempo desde ultimo acceso</th>
+                    <th>CRUD</th>
+                    
                 </tr>
             
             </thead>
@@ -123,12 +125,27 @@ $users = getUsers();
                     <tr>
                         <td> <input type="checkbox"></td>
                         <td><?php echo $user['name'] ?></td>
-                        <td><?php echo $user['mail'] ?></td>
+                        <td>
+                            <a href="mailto:<?php echo $user['mail'] ?>">
+
+                            <?php
+                                echo $user['mail']
+
+                            ?>
+
+                            </a>
+
+                        </td>
                         <td><?php echo $user['company'] ?></td>
                         <td><?php echo $user['role'] ?></td>
                         <td><?php echo $user['profile_rate'] ?></td>
                         <td><?php echo $user['last_access'] ?></td>                        
-                        
+
+                        <td>
+                            <a href="view.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >VIEW</a>
+                            <a href="update.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >UPDATE</a>
+                            <a href="delete.php?mail=<?php echo $user['mail']?>" class="btn btn-sm btn-outline-info" >DELETE</a>
+                        </td>
                         
                     </tr>
 
