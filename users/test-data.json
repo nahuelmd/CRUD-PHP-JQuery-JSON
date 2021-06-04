@@ -1,21 +1,21 @@
 [
     {
-        "name": "Lindsey Stroud  05",
+        "name": "Lindsey Stroud",
         "mail": "lindsey.stroud@gmail.com",
         "company": "Hatchbuck",
         "role": "Manager",
         "profile_rate": "50",
         "last_access": "1607699222",
-        "extension": "png"
+        "extension": "jpg"
     },
     {
-        "name": "Nicci Troiani 4",
+        "name": "Nicci Troiani",
         "mail": "nicci.troiani@gmail.com",
         "company": "Slack",
         "role": "Manager",
         "profile_rate": "75",
         "last_access": "1607699223",
-        "extension": "png"
+        "extension": "jpg"
     },
     {
         "name": "George Fields",
@@ -23,7 +23,8 @@
         "company": "Clockify",
         "role": "CEO",
         "profile_rate": 10,
-        "last_access": 1607699224
+        "last_access": 1607699224,
+        "extension": "jpg"
     },
     {
         "name": "Rebecca Moore",
@@ -31,7 +32,8 @@
         "company": "Upwork",
         "role": "Manager",
         "profile_rate": 25,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "Jane Doe",
@@ -39,7 +41,8 @@
         "company": "Trello",
         "role": "Engineer",
         "profile_rate": 30,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "Jones Dermot",
@@ -47,7 +50,8 @@
         "company": "Slack",
         "role": "Developer",
         "profile_rate": 40,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "Martin Merces",
@@ -55,7 +59,8 @@
         "company": "Google",
         "role": "Manager",
         "profile_rate": 60,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "Franz Ferdinand",
@@ -63,7 +68,8 @@
         "company": "Facebook",
         "role": "Manager",
         "profile_rate": 100,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "John Smith",
@@ -71,7 +77,8 @@
         "company": "Skype",
         "role": "CEO",
         "profile_rate": 75,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     },
     {
         "name": "Judith Williams",
@@ -79,6 +86,7 @@
         "company": "Google",
         "role": "Designer",
         "profile_rate": 45,
-        "last_access": 1607699222
+        "last_access": 1607699222,
+        "extension": "jpg"
     }
 ]
