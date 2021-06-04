@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="form-group">
                         <label for="">Profile Rate</label>
-                        <input class="form-control" type="text" name="profle_rate" value="<?php echo $user['profle_rate'] ?>">
+                        <input class="form-control" type="text" name="profile_rate" value="<?php echo $user['profile_rate'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="">Last Acces</label>
