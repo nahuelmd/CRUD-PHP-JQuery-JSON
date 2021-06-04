@@ -5,7 +5,7 @@ ob_start();
 <?php 
 include 'partials/header.php';
 
-require __DIR__.'/users.php';
+require __DIR__.'/users/users.php';
 if(!isset($_GET['mail'])){
     // echo "Not found";
     include "../saleslayer/partials/not_found.php";
@@ -37,12 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // exit;
 
     
-    if($_POST) {
+    if($_POST['userfile']) {
+        if(!is_dir('../saleslayer/users/images/')){
+            mkdir('../saleslayer/users/images/');
+        }
 
         $nombre_archivo = $_FILES['userfile']['name'];
         $tipo_archivo = $_FILES ['userfile'] ['type'];
         $file_size = $_FILES ["userfile"]["size"];
-        $carpeta = 'receta/';
+        $carpeta = '../saleslayer/users/images/';
         $extension = explode(".", $_FILES['userfile']['name']);
         $extension_nueva = end($extension);
 
@@ -87,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     }
 
-    // header("Location: index.php");
+    header("Location: index.php");
     
 }
 

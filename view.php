@@ -1,7 +1,7 @@
 <?php
 include '../saleslayer/partials/header.php';
 
-require __DIR__.'/users.php';
+require __DIR__.'/users/users.php';
 
 if(!isset($_GET['mail'])){
     // echo "Not found";

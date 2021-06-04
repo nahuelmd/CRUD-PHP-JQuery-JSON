@@ -1,11 +1,7 @@
 <?php
 function getUsers(){
-
-    
-    $usersFile = file_get_contents("test-data.json");
+    $usersFile = file_get_contents("./users/test-data.json");
     return json_decode($usersFile, true);
- 
-
 }
 
 function getUserByMail($mail)
@@ -15,7 +11,6 @@ function getUserByMail($mail)
         if ($user['mail'] ==$mail){
             return $user;
         }
-    
     }
     return null;
 }
@@ -25,6 +20,7 @@ function createUser($data) {
 }
 
 function updateUser($data, $mail){
+    
 
     $users = getUsers();
     foreach ($users as $i => $user){
@@ -38,7 +34,7 @@ function updateUser($data, $mail){
     //  echo '</pre>';
 
     $cambio = json_encode($users);
-    file_put_contents('test-data.json', $cambio);
+    file_put_contents('./users/test-data.json', $cambio);
     
 
    
