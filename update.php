@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // exit;
 
     
-    if($_POST['userfile']) {
+    if($_FILES) {
         if(!is_dir('../saleslayer/users/images/')){
             mkdir('../saleslayer/users/images/');
         }
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nombre_archivo = $_FILES['userfile']['name'];
         $tipo_archivo = $_FILES ['userfile'] ['type'];
         $file_size = $_FILES ["userfile"]["size"];
-        $carpeta = '../saleslayer/users/images/';
+        $carpeta = 'receta/';
         $extension = explode(".", $_FILES['userfile']['name']);
         $extension_nueva = end($extension);
 

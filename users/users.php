@@ -19,7 +19,8 @@ function createUser($data) {
 
 }
 
-function updateUser($data, $mail){
+function updateUser($data, $mail)
+{
     
 
     $users = getUsers();

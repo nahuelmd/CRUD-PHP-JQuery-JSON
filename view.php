@@ -21,8 +21,6 @@ if (!$user){
 // echo '<pre>';
 ?>
 
-
-
     <div class="card">
         <div class="card-header">
             <h3>View Contact: <b><?php echo $user['name'] ?></b></h3>
