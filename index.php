@@ -108,6 +108,7 @@ $users = getUsers();
         <table id="tablaContactos" class="table"  >
             <thead>
                 <tr>
+                    <th>Avatar</th>
                     <th>Seleccionar</th>
                     <th>Nombre</th>
                     <th>Correo</th>
@@ -124,6 +125,14 @@ $users = getUsers();
                 <?php foreach ($users as $user): ?>
                     <tr>
                         <td> <input type="checkbox"></td>
+                        <td> <div class="avatar">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="Avatar" class="md-avatar rounded-circle">                
+                </div></td>
+
+
+                        
+
+
                         <td><?php echo $user['name'] ?></td>
                         <td>
                             <a href="mailto:<?php echo $user['mail'] ?>">

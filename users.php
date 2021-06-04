@@ -1,5 +1,4 @@
 <?php
-
 function getUsers(){
 
     
@@ -27,11 +26,26 @@ function createUser($data) {
 
 function updateUser($data, $mail){
 
+    $users = getUsers();
+    foreach ($users as $i => $user){
+        if ($user['mail'] == $mail) {
+            $users[$i] = array_merge($user, $data);
+        }
+    
+    }
+    //  echo '<pre>';
+    //  var_dump($users);
+    //  echo '</pre>';
+
+    $cambio = json_encode($users);
+    file_put_contents('test-data.json', $cambio);
+    
+
+   
+
 }
 
 function deleteUser($mail){
 
 }
-
-
 ?>
