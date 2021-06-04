@@ -30,6 +30,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // var_dump($_POST);
     // echo '</pre>';
     updateUser($_POST, $userMail);
+
+    echo '<pre>';
+    var_dump($_FILES);
+    echo '</pre>';
+    exit;
+    if (isset($_FILES['picture'])){
+        move_uploaded_file($_FILES['picture']['tmp_name'], __DIR__ . "/images/$userMail.jpg");
+    }
+
+
+
+
     header("Location: index.php");
     
 }

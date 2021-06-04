@@ -1,8 +1,6 @@
 <?php
 include '../saleslayer/partials/header.php';
 
-
-
 require __DIR__.'/users.php';
 
 if(!isset($_GET['mail'])){
@@ -10,10 +8,7 @@ if(!isset($_GET['mail'])){
     include "../saleslayer/partials/not_found.php";
     exit;
 }
-
-
 $userMail = $_GET['mail'];
-
 $user = getUserByMail($userMail);
 
 if (!$user){
@@ -25,9 +20,6 @@ if (!$user){
 // var_dump($user);
 // echo '<pre>';
 ?>
-
-
-
 
 
 
