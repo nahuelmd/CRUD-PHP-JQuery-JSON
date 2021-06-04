@@ -21,8 +21,8 @@ if (!$user){
 // var_dump($_SERVER);
 // echo '</pre>';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
     updateUser($_POST, $userMail);
+    $users = updateUser($_POST, $userMail);
     
     if (isset($_FILES['userfile'])) {
         if(!is_dir('../saleslayer/users/images/')){
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           "png",
           "jpg",
           "jpeg"
-      );
+        );    
       //obtengo el peso del archivo
       $fileinfo = @getimagesize($_FILES["file-input"]["tmp_name"]);
           if (($_FILES["userfile"]["size"] > 100000000)) {
@@ -55,11 +55,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           else{
               $target = "users/images/" . basename($_FILES["userfile"]["name"]);
               if(move_uploaded_file($_FILES['userfile']['tmp_name'], $carpeta.$nombre_nuevo)) {
-                               echo "<p> Imagen cargada correctamente</p>";
-                          }  else {
-                              echo "<p> No se pudo subir el archivo, ha ocurrido un error</p>";
-                           }
+
+                echo ($extension_nueva );
+                $user['extension'] = $extension_nueva;
+                updateUser($user, $userMail);
+                               
+                echo "<p> Imagen cargada correctamente</p>";
+
+            } 
+            
+            else {
+                        echo "<p> No se pudo subir el archivo, ha ocurrido un error</p>";
+                    }
           }
+
+
     }
     header("Location: index.php");
 }
