@@ -75,13 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input class="form-control-file" type="file" name="avatar" >
                     </div>
 
-                    <button class="btn btn-success" >Submit</button>
-                            
+                    <button class="btn btn-success" >Submit</button>                     
                 </form>
-
             </div>    
     </div>        
-
 
 </div>
 
