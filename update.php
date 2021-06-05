@@ -5,13 +5,15 @@ ob_start();
 <?php 
 include 'partials/header.php';
 require __DIR__.'/users/users.php';
-if(!isset($_GET['mail'])){
+if(!isset($_GET['id'])){
     // echo "Not found";
     include "../saleslayer/partials/not_found.php";
     exit;
 }
-$userMail = $_GET['mail'];
-$user = getUserByMail($userMail);
+
+$userId = $_GET['id'];
+
+$user = getUserById($userId);
 if (!$user){
     // echo "Not found";
     include "../saleslayer/partials/not_found.php";
@@ -22,27 +24,17 @@ if (!$user){
 // echo '</pre>';
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
+    $user = updateUser($_POST, $userId);    
     
-    $users = updateUser($_POST, $user);    
-    
-    if  (isset($_FILES['userfile'])) {
-        uploadImage($_FILES['userfile'], $user);        
-    }
+    uploadImage($_FILES['userfile'], $user);
+        
     header("Location: index.php");
 }
 
 ?>
-<div class="container">
-    <div class="card"> 
-        <div class="card-header">
-            <h3>Update contact <b><?php echo $user['name']?> </b></h3>
-        </div>
-        <div class="card-body">  
-                <?php include '_form.php'; ?>
-            </div>    
-    </div>        
-</div>
+
+<?php include '_form.php'; ?>
 
 <?php
 include '../saleslayer/partials/footer.php';

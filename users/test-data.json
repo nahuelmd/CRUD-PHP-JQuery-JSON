@@ -1,23 +1,26 @@
 [
     {
-        "name": "Lindsey Stroud",
+        "id": 1,
+        "name": "Lindsey Stroud ",
         "mail": "lindsey.stroud@gmail.com",
         "company": "Hatchbuck",
-        "role": "Manager",
+        "role": "Manage",
         "profile_rate": "50",
         "last_access": "1607699222",
-        "extension": "png"
+        "extension": "jpg"
     },
     {
+        "id": 2,
         "name": "Nicci Troiani",
         "mail": "nicci.troiani@gmail.com",
         "company": "Slack",
         "role": "Manager",
         "profile_rate": "75",
         "last_access": "1607699223",
-        "extension": "jpg"
+        "extension": "png"
     },
     {
+        "id": 3,
         "name": "George Fields",
         "mail": "george.fields@gmail.com",
         "company": "Clockify",
@@ -27,6 +30,7 @@
         "extension": "png"
     },
     {
+        "id": 4,
         "name": "Rebecca Moore",
         "mail": "rebecca.moore@gmail.com",
         "company": "Upwork",
@@ -36,6 +40,7 @@
         "extension": "jpg"
     },
     {
+        "id": 5,
         "name": "Jane Doe",
         "mail": "jane.doe@gmail.com",
         "company": "Trello",
@@ -45,6 +50,7 @@
         "extension": "jpg"
     },
     {
+        "id": 6,
         "name": "Jones Dermot",
         "mail": "dermot.jones@gmail.com",
         "company": "Slack",
@@ -54,6 +60,7 @@
         "extension": "jpg"
     },
     {
+        "id": 7,
         "name": "Martin Merces",
         "mail": "martin.merces@gmail.com",
         "company": "Google",
@@ -63,6 +70,7 @@
         "extension": "jpg"
     },
     {
+        "id": 8,
         "name": "Franz Ferdinand",
         "mail": "franz.ferdinand@gmail.com",
         "company": "Facebook",
@@ -72,6 +80,7 @@
         "extension": "jpg"
     },
     {
+        "id": 9,
         "name": "John Smith",
         "mail": "john.smith@gmail.com",
         "company": "Skype",
@@ -81,6 +90,7 @@
         "extension": "jpg"
     },
     {
+        "id": 10,
         "name": "Judith Williams",
         "mail": "judith.williams@gmail.com",
         "company": "Google",
@@ -88,5 +98,15 @@
         "profile_rate": 45,
         "last_access": 1607699222,
         "extension": "jpg"
+    },
+    {
+        "name": "Nahuel",
+        "mail": "nahuelmd@gmail.com",
+        "company": "Sales Layer",
+        "role": "Sales Layer",
+        "profile_rate": "100",
+        "last_access": "1234567890",
+        "id": 1190075,
+        "extension": false
     }
 ]

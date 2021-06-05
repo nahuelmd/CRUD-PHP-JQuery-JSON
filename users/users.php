@@ -4,11 +4,11 @@ function getUsers(){
     return json_decode($usersFile, true);
 }
 
-function getUserByMail($mail)
+function getUserById($userId)
 {
     $users = getUsers();
     foreach ($users as $user){
-        if ($user['mail'] ==$mail){
+        if ($user['id'] ==$userId){
             return $user;
         }
     }
@@ -16,16 +16,25 @@ function getUserByMail($mail)
 }
 
 function createUser($data) {
+    $users = getUsers();
+
+    $data['id']= rand(1000000, 2000000 );
+
+    $users[] = $data;
+
+    putJson($users);
+    
+    return $data;
+
 
 }
 
-function updateUser($data, $mail)
+function updateUser($data, $userId)
 {
     $updateUser =[];
     $users = getUsers();
     foreach ($users as $i => $user){
-        if ($user['mail'] == $mail) {
-
+        if ($user['id'] == $userId) {
             $users[$i] = $updateUser = array_merge($user, $data);
         }
     }
@@ -33,42 +42,45 @@ function updateUser($data, $mail)
     //  var_dump($users);
     //  echo '</pre>';
 
-    $cambio = json_encode($users, JSON_PRETTY_PRINT);
-    file_put_contents('./users/test-data.json', $cambio);
+    
+    file_put_contents('./users/test-data.json', json_encode($users, JSON_PRETTY_PRINT));
+
+    putJson($users);
 
     return $updateUser;
 }
 
-function deleteUser($mail){
+function deleteUser($userId){
 
 }
 
-function uploadImage($file, $user){
+ function uploadImage($file, $user){
 
-        // var_dump($file)."<br>";
-        $dir="/images";
-        if (!is_dir(__DIR__.$dir)){
-            mkdir(__DIR__.$dir);
-            echo('Se Creo el directorio');
-        } else {
-            //echo('El directorio ya existe');
+    if (isset($_FILES['userfile']) && $_FILES['userfile']['name']) {
+
+        if(!is_dir(__DIR__."/images")){
+            mkdir(__DIR__."/images");
         }
-        $filename = $file['name'];
-        // echo($filename.'ALGO que escribir');
+        //OBTENER EXTENSION DEL ARCHIVO
+        $fileName = $file['name'];
+        $dotPosition = strpos($fileName,'.');
+        $extension = substr($fileName, $dotPosition + 1);
 
-        $dotPosition = strpos($filename,'.');
-        $extension = substr($filename, $dotPosition + 1);
-        
 
-        move_uploaded_file($file['tmp_name'], __DIR__. "/images/${user['mail']}.$extension");
+        //SUBE EL ARCHIVO A LA CARPETA
+        move_uploaded_file($file['tmp_name'] , __DIR__."/images/${user['id']}.$extension");
+        $user['extension'] = $extension;
+        updateUser($user, $user['id']);
+    }
 
-        $user['extension']= $extension;
-        updateUser($user, $user['mail']);
+ }
+
+
+
+function putJson($users){
+
+    file_put_contents('./users/test-data.json', json_encode($users, JSON_PRETTY_PRINT));
 }
-
-
-
-
 
 
 

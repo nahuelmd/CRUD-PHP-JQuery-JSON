@@ -86,4 +86,24 @@
 
 
 
+
+             // var_dump($file)."<br>";
+             $dir="/images";
+             if (!is_dir(__DIR__.$dir)){
+                 mkdir(__DIR__.$dir);
+                 echo('Se Creo el directorio');
+             } else {
+                 //echo('El directorio ya existe');
+             }
+             $filename = $file['name'];
+             // echo($filename.'ALGO que escribir');
+    
+             $dotPosition = strpos($filename,'.');
+             $extension = substr($filename, $dotPosition + 1);
+            
+    
+             move_uploaded_file($file['tmp_name'], __DIR__. "/images/${user['mail']}.$extension");
+    
+             $user['extension']= $extension;
+             updateUser($user, $user['mail']);
 ?>
