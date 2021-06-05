@@ -100,13 +100,12 @@
         "extension": "jpg"
     },
     {
-        "name": "Nahuel",
-        "mail": "nahuelmd@gmail.com",
-        "company": "Sales Layer",
-        "role": "Sales Layer",
-        "profile_rate": "100",
-        "last_access": "1234567890",
-        "id": 1190075,
-        "extension": false
+        "name": "",
+        "mail": "",
+        "company": "",
+        "role": "",
+        "profile_rate": "",
+        "last_access": "",
+        "id": 1622086
     }
 ]

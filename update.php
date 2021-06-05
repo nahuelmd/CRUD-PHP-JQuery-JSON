@@ -23,16 +23,30 @@ if (!$user){
 // var_dump($_SERVER);
 // echo '</pre>';
 
+$errors = [
+    'name' => "",
+    'mail' => "",
+    'company' => "",
+    'role' => "",
+    'profile_rate' => "",
+    'last_access' => "",
+];
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
-    $user = updateUser($_POST, $userId);    
     
-    uploadImage($_FILES['userfile'], $user);
-        
-    header("Location: index.php");
-}
+    $user = array_merge($user, $_POST);
 
-?>
+    $isValid = validateUser($user, $errors);
+
+    if($isValid){ 
+        $user = updateUser($_POST, $userId);        
+        uploadImage($_FILES['userfile'], $user);            
+        header("Location: index.php");
+    }
+}
+ 
+?> 
 
 <?php include '_form.php'; ?>
 

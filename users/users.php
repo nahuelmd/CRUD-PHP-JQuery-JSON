@@ -50,8 +50,19 @@ function updateUser($data, $userId)
     return $updateUser;
 }
 
-function deleteUser($userId){
+function deleteUser($id){
 
+    $users = getUsers();
+
+    foreach ($users as $i => $user){
+        if ($user['id'] == $id ){
+            // unset($user[$i]);
+            array_splice($users, $i, 1); 
+            
+        }
+    }
+    putJson($users); 
+    //var_dump($users);
 }
 
  function uploadImage($file, $user){
@@ -80,6 +91,44 @@ function deleteUser($userId){
 function putJson($users){
 
     file_put_contents('./users/test-data.json', json_encode($users, JSON_PRETTY_PRINT));
+}
+
+function validateUser($user, &$errors){
+
+    $isValid = true;
+
+    //VALIDATION START
+    $user = array_merge($user, $_POST);
+    
+
+    if (!$user['name']){
+        $isValid = false; 
+        $errors['name'] = 'Name is required';
+    }
+
+    if ($user['mail'] && !filter_var($user['mail'], FILTER_VALIDATE_EMAIL)) {
+        $isValid = false; 
+        $errors['mail'] = 'Mail is required and must be a valid address';
+    }
+
+    if (!$user['company'] || strlen($user['company']) < 6 || strlen($user['company']) > 50){
+        $isValid = false; 
+        $errors['company'] = 'Company is required and must be more than 6 and less than 50 characters';
+    }
+    if (!$user['role'] || strlen($user['role']) < 6 || strlen($user['role']) > 50){
+        $isValid = false; 
+        $errors['role'] = 'Role is required and must be more than 6 and less than 50 characters';
+    }
+
+    if (!filter_var($user['profile_rate'], FILTER_VALIDATE_INT)){
+        $isValid = false; 
+        $errors['profile_rate'] = 'Profile rate is required and must be a number';
+    }
+
+    //VALIDATION ENDS
+
+    return $isValid;
+
 }
 
 

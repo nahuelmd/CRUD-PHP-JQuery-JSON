@@ -18,18 +18,35 @@ $user = [
 
 ];
 
+$errors = [
+    'name' => "",
+    'mail' => "",
+    'company' => "",
+    'role' => "",
+    'profile_rate' => "",
+    'last_access' => "",
+];
+
+$isValid = true;
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
 
+    $user = array_merge($user, $_POST);
+    
+    $isValid = validateUser($user, $errors);
+    
 
+    if($isValid){
     $user = createUser(($_POST));
 
     
     uploadImage($_FILES['userfile'], $user);
 
-
-
+    
     header("Location: index.php");
-
+ 
+    }
 }
 
 
