@@ -21,7 +21,6 @@ function createUser($data) {
 
 function updateUser($data, $mail)
 {
-    
     $updateUser =[];
     $users = getUsers();
     foreach ($users as $i => $user){
@@ -38,11 +37,22 @@ function updateUser($data, $mail)
     file_put_contents('./users/test-data.json', $cambio);
 
     return $updateUser;
-    
-
 }
 
 function deleteUser($mail){
 
 }
+
+function uploadImage(){
+
+
+}
+
+
+
+
+
+
+
+
 ?>

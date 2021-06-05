@@ -22,8 +22,8 @@
         "mail": "george.fields@gmail.com",
         "company": "Clockify",
         "role": "CEO",
-        "profile_rate": 10,
-        "last_access": 1607699224,
+        "profile_rate": "10",
+        "last_access": "1607699224",
         "extension": "jpg"
     },
     {
@@ -31,8 +31,8 @@
         "mail": "rebecca.moore@gmail.com",
         "company": "Upwork",
         "role": "Manager",
-        "profile_rate": 25,
-        "last_access": 1607699222,
+        "profile_rate": "25",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
