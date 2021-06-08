@@ -15,7 +15,24 @@
 
     <script>
     $(document).ready(function() {
-        $('#tablaContactos').DataTable();
+        $('#tablaContactos').DataTable({
+           "language": {
+            search: '<i class="fas fa-search" aria-hidden="true"></i>',
+            searchPlaceholder: 'Search for a contact'
+            }
+        },
+        $(".search").keypress(function(){
+            $(this).removeClass().addClass("searchOut")
+        }),
+        $(".searchIn").click(function(){
+            if( !$(this).hasClass("searchOut"))
+            $(this).addClass("searchin")
+        }),
+        $(document).on("keyup",".searchOut", function(){
+        if(($(this).val().length) == 0 )
+        $(this).removeClass().addClass("searchIn")
+        })
+        );
     } );
     </script>
 
@@ -25,8 +42,114 @@
     <script>        
     $('input[type=checkbox]').change(function(){
         var number = $('input[type=checkbox]:checked').length;
-        $('.totalchecked').html(number + ' selected'  );            
+        $('.totalchecked').html(number + ' selected' + ' <i class="fas fa-trash" ></i>'  );            
     });
+    </script>
+
+    <script>
+        window.onload = function myFunction() {
+            var x = document.getElementById("sidebar-container");
+            var titulo = document.getElementById("esconderTitulo");   
+            var titulo2 = document.getElementById("esconderTitulo2");   
+            var titulo3 = document.getElementById("esconderTitulo3");   
+            var titulo4 = document.getElementById("esconderTitulo4");   
+            var titulo5 = document.getElementById("esconderTitulo5");        
+            var titulo6 = document.getElementById("esconderTitulo6");
+            var settings = document.getElementById("esconderSettings");
+            var nombre = document.getElementById("esconderNombreAdmin");   
+            var mail = document.getElementById("esconderMailAdmin"); 
+            var logo = document.getElementById("esconderlogo");
+            var hidder = document.getElementById("esconderHider");
+
+            
+            
+            if (titulo.style.display === "inline") {
+                console.log('Lo como inline');
+                x.style.width = "8vw";
+                titulo.style.display = "none";
+                titulo2.style.display = "none";
+                titulo3.style.display = "none";
+                titulo4.style.display = "none";
+                titulo5.style.display = "none";
+                titulo6.style.display = "none";
+                settings.style.display = "none";
+                nombre.style.display = "none";
+                mail.style.display = "none";
+                logo.style.display = "none";
+                hidder.style.display = "none";
+
+            } else {
+                console.log('PASO ya ALGO');
+                console.log('PASO va a pasar ALGO');
+
+                    x.style.width = "20vw";
+                    titulo.style.display = "inline";
+                    titulo2.style.display = "inline";
+                    titulo3.style.display = "inline";
+                    titulo4.style.display = "inline";
+                    titulo5.style.display = "inline";
+                    titulo6.style.display = "inline";
+                    settings.style.display = "inline";
+                    nombre.style.display = "inline";
+                    mail.style.display = "inline";
+                    logo.style.display = "inline";
+                    hidder.style.display = "inline";
+                
+            }
+
+        }
+
+        function myFunction() {
+            var x = document.getElementById("sidebar-container");
+            var titulo = document.getElementById("esconderTitulo");   
+            var titulo2 = document.getElementById("esconderTitulo2");   
+            var titulo3 = document.getElementById("esconderTitulo3");   
+            var titulo4 = document.getElementById("esconderTitulo4");   
+            var titulo5 = document.getElementById("esconderTitulo5");        
+            var titulo6 = document.getElementById("esconderTitulo6");
+            var settings = document.getElementById("esconderSettings");
+            var nombre = document.getElementById("esconderNombreAdmin");   
+            var mail = document.getElementById("esconderMailAdmin"); 
+            var logo = document.getElementById("esconderlogo");
+            var hidder = document.getElementById("esconderHider");
+
+            
+            
+            if (titulo.style.display === "inline") {
+                console.log('Lo como inline');
+                x.style.width = "8vw";
+                titulo.style.display = "none";
+                titulo2.style.display = "none";
+                titulo3.style.display = "none";
+                titulo4.style.display = "none";
+                titulo5.style.display = "none";
+                titulo6.style.display = "none";
+                settings.style.display = "none";
+                nombre.style.display = "none";
+                mail.style.display = "none";
+                logo.style.display = "none";
+                hidder.style.display = "none";
+
+            } else {
+                console.log('PASO ya ALGO');
+                console.log('PASO va a pasar ALGO');
+
+                    x.style.width = "20vw";
+                    titulo.style.display = "inline";
+                    titulo2.style.display = "inline";
+                    titulo3.style.display = "inline";
+                    titulo4.style.display = "inline";
+                    titulo5.style.display = "inline";
+                    titulo6.style.display = "inline";
+                    settings.style.display = "inline";
+                    nombre.style.display = "inline";
+                    mail.style.display = "inline";
+                    logo.style.display = "inline";
+                    hidder.style.display = "inline";
+                
+            }
+
+        }
     </script>
 
 

@@ -111,13 +111,13 @@ function validateUser($user, &$errors){
         $errors['mail'] = 'Mail is required and must be a valid address';
     }
 
-    if (!$user['company'] || strlen($user['company']) < 6 || strlen($user['company']) > 50){
+    if (!$user['company'] || strlen($user['company']) < 2 || strlen($user['company']) > 50){
         $isValid = false; 
-        $errors['company'] = 'Company is required and must be more than 6 and less than 50 characters';
+        $errors['company'] = 'Company is required and must be more than 2 and less than 50 characters';
     }
-    if (!$user['role'] || strlen($user['role']) < 6 || strlen($user['role']) > 50){
+    if (!$user['role'] || strlen($user['role']) < 2 || strlen($user['role']) > 50){
         $isValid = false; 
-        $errors['role'] = 'Role is required and must be more than 6 and less than 50 characters';
+        $errors['role'] = 'Role is required and must be more than 2 and less than 50 characters';
     }
 
     if (!filter_var($user['profile_rate'], FILTER_VALIDATE_INT)){

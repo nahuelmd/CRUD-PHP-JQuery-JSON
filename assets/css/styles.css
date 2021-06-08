@@ -16,7 +16,7 @@
 
 }
 body {
-    
+    /* overflow: hidden; */
 }
 
 .main-container{
@@ -34,19 +34,25 @@ body {
 a{
     text-decoration: none;
 }
+
+#sidebar-container > div.bottom-section > a {
+    text-decoration: none;
+    margin-left: 10px;
+}
 .logo{
     display: flex;
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid var(--grisClaroform);
+    margin-left: 10px;
 
 }
 .logo > img {
     margin: auto;
     margin-left: 0px;
     margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 .logo > h4 {
     margin: auto;
@@ -62,7 +68,9 @@ a{
 }
 .user-section > .avatar {
     margin: auto;
-    margin-left: 20px;
+    margin-left: 22px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 .user-section > .user-info {
     margin: auto;
@@ -93,15 +101,17 @@ a{
 }
 
 #sidebar-container {
-    min-height: 100vh;    
+    min-height: 100vh;   
+    width: 20vw; 
 }
 
 #sidebar-container .logo {
     padding: .875rem 1.25rem;
 }
 #sidebar-container .menu {
-    width: 18rem;
+    width: 100%;
     border-bottom: 1px solid var(--grisClaroform);
+    
 }
 
 #sidebar-container .menu i {
@@ -111,7 +121,9 @@ a{
 #sidebar-container .menu a {
     color: var(--textos) !important;
     padding-top: 1;
+    margin-left: 10px;
 }
+
 
 #sidebar-container .menu a:hover {
     color: var(--hoverPrimario) !important;
@@ -127,6 +139,7 @@ a{
 #sidebar-container .settings-section a {
     color: var(--textos) !important;
     padding-top: 1;
+    margin-left: 10px;
 }
 #sidebar-container .settings-section a:hover {
     color: var(--hoverPrimario) !important;
@@ -143,6 +156,14 @@ a{
 #sidebar-container .bottom-section a {
     color: var(--textos) !important;
     padding-top: 1;
+    
+}
+
+#sidebar-container > div.menu > a{
+    text-decoration: none;
+}
+#sidebar-container > div.settings-section > a{
+    text-decoration: none;
 }
 #sidebar-container .bottom-section a:hover {
     color: var(--hoverPrimario) !important;
@@ -169,7 +190,14 @@ a{
 
 /* Tabla Datatables */
 
+#tablaContactos > tbody > tr{
+    height: 6px;
+    
+}
 
+/* #tablaContactos > tbody > tr:nth-child(1) > td:nth-child(9){
+    display: none;
+} */
 
 #tablaContactos > tbody > tr:hover{
     background-color: var(--hoverPrimario);
@@ -182,4 +210,133 @@ a{
     width: 30px;
     height: auto;
     border-radius: 50%;
+}
+
+
+/* BOTON ADD CONTACT */
+#botoncreate{
+    width: 120px;
+    background-color: var(--defaultPrimario);
+    color: var(--blanco);
+    position: absolute;
+    right: 20px;
+    margin-top: 60px;
+}
+#botoncreate:hover{
+    width: 120px;
+    background-color: var(--hoverPrimario);
+    color: var(--blanco);
+}
+
+
+
+#tablaContactos_wrapper {
+    width: 100%;
+    background-color: transparent;
+}
+
+#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2){
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    width: 100%;
+}
+
+#tablaContactos_filter{
+    width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+    
+}
+#tablaContactos_filter > label {
+    width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+    
+}
+#tablaContactos_filter > label > input {
+    margin-left: 200px;
+    width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+    height: 50px;
+    border-color: transparent;
+    outline-color: red;
+    /* background: no-repeat url(/assets/img/search-solid.png);
+    background-size: 20px;
+    background-position: left;
+    background-position-x: 30px;
+    filter: grayscale(100%); */
+    
+}
+
+.form-control{
+    box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
+    padding: 0.25rem 2rem;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
+    padding: 0.25rem 2rem;
+}
+
+
+
+#tablaContactos_filter > label{
+    
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    border-color: transparent;
+}
+#tablaContactos_filter > label > i{
+    
+    color: #c4cfde;
+    background-color:transparent;
+    height: 50px;
+    line-height: 50px;
+    margin-right: -20px;
+    z-index: 1;
+}
+
+#tablaContactos_filter{
+    text-align: left;
+
+}
+.totalchecked{
+    margin-top: 50px;
+}
+
+
+#sidebar-container > div.settings-section {
+    width: 20vw;
+}
+
+#sidebar-container{
+    transition-duration: 500ms;
+    transition-property: width;
+    width:20vw;
+    overflow: hidden;
+}
+
+#escondeBarra{
+    
+    display: line;
+}
+
+#esconderTitulo{
+    display: inline;
+}
+
+
+.row{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media (min-width: 768px) {
+.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 80%;
 }
