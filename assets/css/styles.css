@@ -19,6 +19,8 @@ body {
     /* overflow: hidden; */
 }
 
+
+
 .main-container{
     background-color: var(--grisClarofondo);
     display: flex;
@@ -35,10 +37,7 @@ a{
     text-decoration: none;
 }
 
-#sidebar-container > div.bottom-section > a {
-    text-decoration: none;
-    margin-left: 10px;
-}
+
 .logo{
     display: flex;
     flex-direction: row;
@@ -103,6 +102,11 @@ a{
 #sidebar-container {
     min-height: 100vh;   
     width: 20vw; 
+    background-color: var(--blanco);
+}
+#sidebar-container > div.bottom-section > a {
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 #sidebar-container .logo {
@@ -261,38 +265,59 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
 
 
 
-#tablaContactos_wrapper {
-    width: 100%;
-    background-color: transparent;
-    margin: auto;   
-    
-}
 
 /* BUSCADOR */
 
+#tablaContactos_wrapper {
+    width: 100%;
+    background-color:var(--blanco);
+}
 #tablaContactos_wrapper > div:nth-child(1){    
     width: 100%;
+    
 }
 #tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2){
     position: absolute;
     top: 0px;
     left: 20vw;
-    width: 50vw;
+    width: 48vw;
+    background-color: var(--blanco);
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
 }
-
-/* .col-sm-12{
-    width: 100vw;
-} */
-
 
 @media (min-width: 768px) {
     .col-md-6 {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 100vw;
-        min-width: 80vw;
+        min-width: 79vw;
     }
     }
+
+
+/* .col-sm-12{
+    width: 100vw;
+} */
+
+/* BOTON SELECT FILTRADO START */
+.table thead th {
+    border-bottom: none;
+    border-top: none;
+}
+
+#tablaContactos > thead > tr > th.sorting.sorting_asc > select {
+    background-color: transparent;
+}
+
+
+
+/* BOTON SELECT FILTRADO END */
+
 
 
 
@@ -300,13 +325,27 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     width: 100%;
     min-width: 100%;
     margin-left: 0px;
-    margin-right: 0px;
-    
+    margin-right: 0px;   
+}
+
+
+#tablaContactos_filter > label > i{    
+    color: #c4cfde;
+    background-color:transparent;
+    height: 50px;
+    line-height: 50px;
+    margin-right: -20px;
+    z-index: 1;
 }
 #tablaContactos_filter > label {
     width: 100%;
     min-width: 100%;
     margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-color: transparent;
     
 }
 #tablaContactos_filter > label > input {
@@ -316,7 +355,6 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     margin-left: 0px;
     height: 50px;
     border-color: transparent;
-    outline-color: red;
     /* background: no-repeat url(/assets/img/search-solid.png);
     background-size: 20px;
     background-position: left;
@@ -336,22 +374,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
 
 
 
-#tablaContactos_filter > label{
-    
-    display: flex;
-    justify-content: center;
-    margin-right: 0px;
-    border-color: transparent;
-}
-#tablaContactos_filter > label > i{
-    
-    color: #c4cfde;
-    background-color:transparent;
-    height: 50px;
-    line-height: 50px;
-    margin-right: -20px;
-    z-index: 1;
-}
+
 
 #tablaContactos_filter{
     text-align: left;

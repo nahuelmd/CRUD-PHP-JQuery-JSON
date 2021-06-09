@@ -45,8 +45,8 @@
         "mail": "jane.doe@gmail.com",
         "company": "Trello",
         "role": "Engineer",
-        "profile_rate": 30,
-        "last_access": 1607699222,
+        "profile_rate": "30",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
@@ -55,8 +55,8 @@
         "mail": "dermot.jones@gmail.com",
         "company": "Slack",
         "role": "Developer",
-        "profile_rate": 40,
-        "last_access": 1607699222,
+        "profile_rate": "40",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
@@ -65,8 +65,8 @@
         "mail": "martin.merces@gmail.com",
         "company": "Google",
         "role": "Manager",
-        "profile_rate": 60,
-        "last_access": 1607699222,
+        "profile_rate": "60",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
@@ -75,8 +75,8 @@
         "mail": "franz.ferdinand@gmail.com",
         "company": "Facebook",
         "role": "Manager",
-        "profile_rate": 100,
-        "last_access": 1607699222,
+        "profile_rate": "100",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
@@ -85,8 +85,8 @@
         "mail": "john.smith@gmail.com",
         "company": "Skype",
         "role": "CEO",
-        "profile_rate": 75,
-        "last_access": 1607699222,
+        "profile_rate": "75",
+        "last_access": "1607699222",
         "extension": "jpg"
     },
     {
@@ -95,8 +95,8 @@
         "mail": "judith.williams@gmail.com",
         "company": "Google",
         "role": "Designer",
-        "profile_rate": 45,
-        "last_access": 1607699222,
+        "profile_rate": "45",
+        "last_access": "1607699222",
         "extension": "jpg"
     }
 ]

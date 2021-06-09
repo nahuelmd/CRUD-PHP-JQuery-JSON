@@ -57,53 +57,22 @@ $users = getUsers();
         <div class="totalchecked">0 selected <i class="fas fa-trash"></i> </div>
         </div>
 
-        <main class="container">
-
-        <button class="btn btn-success" data-toggle="modal" data-target="#tituloVentana" > PRUEBA</button>
-
-        <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-    
-                    <div class="modal-header">
-                        <h5 id="tituloVentana">ESTE ES EL TITULO</h5>
-                        <button class="close" data-dismiss="modal" arial-label="Cerrar" >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-success" ></div>
-                            <h6><strong>Dus tados se guardaron</strong></h6>
-                    </div>
-    
-                    <div class="modal-footer">
-                        <button class="btn btn-warning" type="button" data-dismiss="modal"  >
-                            cerrar
-                        </button>
-                        <button class="btn btn-success" type="button" >
-                            Acceptar
-                        </button>
-                    </div>
-    
-                </div>
-            </div>
-        </div>
-
-        </main>
 
 
 
-    <div class="table-container">
+
+        <div class="table-container">
+        <form action="delete-multi.php" method="POST">
         <table id="tablaContactos" class="table">
             <thead>
                 <tr>
                     <th>Select</th>
                     <th>Avatar</th>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Compañia</th>
+                    <th>Name</th>
+                    <th>Mail</th>
+                    <th>Company</th>
                     <th>Role</th>
-                    <th>Porcentaje</th>
+                    <th>Rate</th>
                     <th>Last Acces</th>
                     <th>CRUD</th>
                 </tr>
@@ -112,7 +81,13 @@ $users = getUsers();
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
-                        <td> <input type="checkbox"></td>
+                    <td>
+                           
+                            <input type='checkbox' name='checkbox[]' value='<?= $user['id'] ?>' >
+                            
+                        </form>
+                        
+                    </td>
                         <td>
                             <?php if (isset($user['extension'])): ?>
                                 <img src="<?php echo "users/images/${user['id']}.${user['extension']}" ?>" alt="">
@@ -149,6 +124,7 @@ $users = getUsers();
                 <?php endforeach;;?>
             </tbody>
         </table>
+        <input type='submit' value='delete records' id="delete" name='delete'   ><br><br>
     </div>
     
     </div>

@@ -65,6 +65,19 @@ function deleteUser($id){
     //var_dump($users);
 }
 
+function deleteMultiUser($id){
+    $users = getUsers();
+    foreach($users as $i => $user){
+        if ($user['id'] == $id){
+        array_splice($users, $i, 1); 
+        putJson($users); 
+        }
+    }
+    putJson($users); 
+}
+
+
+
  function uploadImage($file, $user){
 
     if (isset($_FILES['userfile']) && $_FILES['userfile']['name']) {
