@@ -3,6 +3,8 @@ include '../saleslayer/partials/header.php';
 require '../saleslayer/users/users.php';
 $users = getUsers();
 ?>
+<!-- Vertically centered modal -->
+
 
 <div class="main-container">
     <div class="d-flex" id="myLinks">
@@ -40,13 +42,58 @@ $users = getUsers();
         </div>
          
     </div> 
-    
+
     <div class="right-side-section w-100">
+
+
+        <div class="notification-section">
+            <div class="circulo"></div>
+            <div class="bell">
+                <i id="bell" class="far fa-bell"></i>
+            </div>            
+        </div>
         <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p>
         <div class="contador-checkbox">
         <div class="totalchecked">0 selected <i class="fas fa-trash"></i> </div>
         </div>
 
+        <main class="container">
+
+        <button class="btn btn-success" data-toggle="modal" data-target="#tituloVentana" > PRUEBA</button>
+
+        <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+    
+                    <div class="modal-header">
+                        <h5 id="tituloVentana">ESTE ES EL TITULO</h5>
+                        <button class="close" data-dismiss="modal" arial-label="Cerrar" >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success" ></div>
+                            <h6><strong>Dus tados se guardaron</strong></h6>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" type="button" data-dismiss="modal"  >
+                            cerrar
+                        </button>
+                        <button class="btn btn-success" type="button" >
+                            Acceptar
+                        </button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+        </main>
+
+
+
+    <div class="table-container">
         <table id="tablaContactos" class="table">
             <thead>
                 <tr>
@@ -79,7 +126,16 @@ $users = getUsers();
                         <td><?php echo $user['company'] ?></td>
                         <td><?php echo $user['role'] ?></td>
                         <td><?php echo $user['profile_rate'] ?> %</td>
-                        <td><?php echo $user['last_access'] ?></td>                        
+                        <?php  
+                            $ultimoAcceso = $user['last_acces'];
+                            $fecha_actual = date("Y-m-d");
+                            $resta = strtotime($ultimoAcceso) - strtotime($fecha_actual);
+                            $diferencia = intval($resta / 86400000);
+                            $limpio = abs($diferencia);
+                        
+                        
+                        ?>
+                        <td><?php echo $limpio ." ago" ?></td>                        
                         <td>
                             <a href="view.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-info" >VIEW</a>
                             <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-secondary" >UPDATE</a>
@@ -94,6 +150,9 @@ $users = getUsers();
             </tbody>
         </table>
     </div>
+    
+    </div>
+
 
 </div>
 

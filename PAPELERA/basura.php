@@ -5,9 +5,8 @@
 
 <!-- JS JQUERY -->
 <script src="../assets/js/jquery-3.5.1.js" ></script>
-
+<script src="../assets/js/jquery.min.js" ></script>
 <script src="../assets/js/jquery.dataTables.min.js" ></script>
-<script src="/assets/js/bootstrap.bundle.min.js.map" ></script>
 
 
 
@@ -16,20 +15,15 @@
 
     <script>
     $(document).ready(function() {
-
-
         $('#tablaContactos').DataTable({
            "language": {
             search: '<i class="fas fa-search" aria-hidden="true"></i>',
             searchPlaceholder: 'Search for a contact'
             }
-        });
-        
-    } );
+        }
+  
+    } ;
     </script>
-    
-
-    
 
 
     
@@ -55,12 +49,11 @@
             var mail = document.getElementById("esconderMailAdmin"); 
             var logo = document.getElementById("esconderlogo");
             var hidder = document.getElementById("esconderHider");
-            var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");
 
             
             
-            if (titulo.style.display == "inline") {
-                
+            if (titulo.style.display === "inline") {
+                console.log('Lo como inline');
                 x.style.width = "8vw";
                 titulo.style.display = "none";
                 titulo2.style.display = "none";
@@ -73,11 +66,10 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "8vw";
-
 
             } else {
-                
+                console.log('PASO ya ALGO');
+                console.log('PASO va a pasar ALGO');
 
                     x.style.width = "20vw";
                     titulo.style.display = "inline";
@@ -91,7 +83,6 @@
                     mail.style.display = "inline";
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
-
                 
             }
 
@@ -110,7 +101,6 @@
             var mail = document.getElementById("esconderMailAdmin"); 
             var logo = document.getElementById("esconderlogo");
             var hidder = document.getElementById("esconderHider");
-            var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");
 
             
             
@@ -128,8 +118,6 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "8vw";
-                buscador.style.width = "92vw";
 
             } else {
                 console.log('PASO ya ALGO');
@@ -147,8 +135,6 @@
                     mail.style.display = "inline";
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
-                    buscador.style.left = "20vw";
-                    buscador.style.width = "80vw";
                 
             }
 
@@ -156,18 +142,6 @@
     </script>
 
 
-<!-- MODAL== -->
-    <script>
-        $('#ventanaModal').on('shown.bs.modal', function () {
-  $('#tituloVentana').trigger('focus')
-})
-    </script>
-
-<!-- Select filter -->
-<script src="/assets/js/ddtf.js"></script>
-<script>
-jQuery('#tablaContactos').ddTableFilter();
-</script>
 
 
     

@@ -24,10 +24,11 @@
 
         <link href="/assets/js/jquery.dataTables.min.js" rel="stylesheet" >
                 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" >
+        
         <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
-
-        <link href="/assets/css/boostrap.css" rel="stylesheet" >
+        
+        <link href="/assets/css/bootstrap.css.map" rel="stylesheet" >
+        <link href="/assets/css/bootstrap.css" rel="stylesheet" >
         <link href="/assets/css/styles.css" rel="stylesheet" >
 
                 
