@@ -27,6 +27,76 @@
         "role": "CEO",
         "profile_rate": "10",
         "last_access": "1607699224",
+        "extension": "png"
+    },
+    {
+        "id": 4,
+        "name": "Rebecca Moore",
+        "mail": "rebecca.moore@gmail.com",
+        "company": "Upwork",
+        "role": "Manager",
+        "profile_rate": "25",
+        "last_access": "1607699222",
+        "extension": "jpg"
+    },
+    {
+        "id": 5,
+        "name": "Jane Doe",
+        "mail": "jane.doe@gmail.com",
+        "company": "Trello",
+        "role": "Engineer",
+        "profile_rate": 30,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 6,
+        "name": "Jones Dermot",
+        "mail": "dermot.jones@gmail.com",
+        "company": "Slack",
+        "role": "Developer",
+        "profile_rate": 40,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 7,
+        "name": "Martin Merces",
+        "mail": "martin.merces@gmail.com",
+        "company": "Google",
+        "role": "Manager",
+        "profile_rate": 60,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 8,
+        "name": "Franz Ferdinand",
+        "mail": "franz.ferdinand@gmail.com",
+        "company": "Facebook",
+        "role": "Manager",
+        "profile_rate": 100,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 9,
+        "name": "John Smith",
+        "mail": "john.smith@gmail.com",
+        "company": "Skype",
+        "role": "CEO",
+        "profile_rate": 75,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 10,
+        "name": "Judith Williams",
+        "mail": "judith.williams@gmail.com",
+        "company": "Google",
+        "role": "Designer",
+        "profile_rate": 45,
+        "last_access": 1607699222,
         "extension": "jpg"
     }
 ]

@@ -235,7 +235,7 @@ contenedor-tabla{
 
 .spacer200{
     width: 100%;
-    height: 100px;
+    height: 180px;
 }
 
 /* BOTON ADD CONTACT */
@@ -259,20 +259,24 @@ contenedor-tabla{
 
 /* BOTON TRASH */
 body > div > div.right-side-section.w-100 > div.contador-checkbox {    
+    display: flex;
+    flex-direction: row;
     position: absolute;
-    top: 190px;
+    top: 250px;
     left: 470px;
     z-index: 1;
 }
 
-.totalchecked{
-    
-
+#checkall{
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    left: -29px;
 }
 
 #delete{
     position: absolute;
-    top: 190px;
+    top: 250px;
     left: 600px;
     z-index: 1;
     background-color: transparent;
@@ -281,9 +285,23 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox {
 #delete:hover{
     color: red;
 }
+/* COMPANY FILTER */
 
 
+#tablaContactos > thead > tr > th:nth-child(5) > select {
+    position: absolute;
+    top: -100px;
+    width: 200px;
+}
 
+#tablaContactos > thead > tr > th:nth-child(5)::before{
+    display: none;
+}
+#tablaContactos > thead > tr > th:nth-child(5)::after{
+    display: none;
+}
+
+/* COMPANY END */
 
 body > div > div.right-side-section.w-100 > div.contador-checkbox > div > i{
     margin-left: 20px;
@@ -401,9 +419,12 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     
 }
 
+
+
 .form-control{
     box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
     padding: 0.25rem 2rem;
+    
 }
 .form-control:focus{
     box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
@@ -449,6 +470,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
 
 .notification-section{
     margin-right: 500px;
+    cursor: pointer;
 }
 
 .bell{

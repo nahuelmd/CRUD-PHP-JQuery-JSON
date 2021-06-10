@@ -130,7 +130,7 @@ $users = getUsers();
                     <th>Avatar</th>
                     <th>Name</th>
                     <th>Mail</th>
-                    <th>Company</th>
+                    <th>All</th>
                     <th>Role</th>
                     <th>Rate</th>
                     <th>Last Acces</th>
