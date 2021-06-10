@@ -56,71 +56,71 @@ $users = getUsers();
                 <i id="bell" class="far fa-bell"></i>
             </div>            
         </div>
-        <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p>
+        <div class="spacer200"></div>
+        <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->
         <div class="contador-checkbox">
         <div class="totalchecked">0 selected <i class="fas fa-trash"></i> </div>
         </div>
 
         
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Add contact
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="btn btn-primary" id="botoncreate" data-toggle="modal" data-target="#exampleModal">
+        Add contact
         </button>
-      </div>
-      <div class="modal-body">
-        
-      
-<?php      
-$user = [
-    'id' => '',
-    'name' => '',
-    'mail' => '',
-    'compañy' => '',
-    'role' => '',
-    'profile_rate' => '',
-    'last_access' => '',
-];
-$errors = [
-    'name' => "",
-    'mail' => "",
-    'company' => "",
-    'role' => "",
-    'profile_rate' => "",
-    'last_access' => "",
-];
-$isValid = true;
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
-    $user = array_merge($user, $_POST);
-    $isValid = validateUser($user, $errors);
-    if($isValid){
-    $user = createUser(($_POST));    
-    uploadImage($_FILES['userfile'], $user);    
-    header("Location: index.php");
-    }
-}
-?>
-<?php include '_form.php'; ?>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">                
+                <?php      
+                $user = [
+                    'id' => '',
+                    'name' => '',
+                    'mail' => '',
+                    'compañy' => '',
+                    'role' => '',
+                    'profile_rate' => '',
+                    'last_access' => '',
+                ];
+                $errors = [
+                    'name' => "",
+                    'mail' => "",
+                    'company' => "",
+                    'role' => "",
+                    'profile_rate' => "",
+                    'last_access' => "",
+                ];
+                $isValid = true;
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
+                    $user = array_merge($user, $_POST);
+                    $isValid = validateUser($user, $errors);
+                    if($isValid){
+                    $user = createUser(($_POST));    
+                    uploadImage($_FILES['userfile'], $user);    
+                    header("Location: index.php");
+                    }
+                }
+                ?>
+                <?php include '_form.php'; ?>
 
     </div>
-      <div class="modal-footer">
+    <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="boton-cancel" data-dismiss="modal">Cancel</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
+    </div>
 
-        <div class="table-container">
+
+    <div class="table-container">
         <form action="delete-multi.php" method="POST">
         <table id="tablaContactos" class="table">
             <thead>
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php foreach ($users as $user): ?>
                     <tr>
                     <td>
-                           
+                        
                             <input type='checkbox' name='checkbox[]' value='<?= $user['id'] ?>' >
                             
                         </form>
@@ -169,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
                         
                         ?>
-                        <td><?php echo $limpio ." ago" ?></td>                        
+                        <td><?php echo $limpio ." days ago" ?></td>                        
                         <td>
                             <a href="view.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-info" >VIEW</a>
                             <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-secondary" >UPDATE</a>
@@ -183,14 +183,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endforeach;;?>
             </tbody>
         </table>
-        <input type='submit' value='delete records' id="delete" name='delete'   ><br><br>
-    </div>
-    
-    </div>
 
+    </div>
 
 </div>
 
+
+
+</div>
+  
 
 <?php
 include '../saleslayer/partials/footer.php'

@@ -61,7 +61,7 @@
             
             if (titulo.style.display == "inline") {
                 
-                x.style.width = "8vw";
+                x.style.width = "4vw";
                 titulo.style.display = "none";
                 titulo2.style.display = "none";
                 titulo3.style.display = "none";
@@ -73,7 +73,7 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "8vw";
+                buscador.style.left = "4vw";
 
 
             } else {
@@ -116,7 +116,7 @@
             
             if (titulo.style.display === "inline") {
                 console.log('Lo como inline');
-                x.style.width = "8vw";
+                x.style.width = "4vw";
                 titulo.style.display = "none";
                 titulo2.style.display = "none";
                 titulo3.style.display = "none";
@@ -128,8 +128,8 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "8vw";
-                buscador.style.width = "92vw";
+                buscador.style.left = "4vw";
+                buscador.style.width = "96vw";
 
             } else {
                 console.log('PASO ya ALGO');
