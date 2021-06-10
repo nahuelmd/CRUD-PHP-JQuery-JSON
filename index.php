@@ -59,7 +59,8 @@ $users = getUsers();
         <div class="spacer200"></div>
         <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->
         <div class="contador-checkbox">
-        <div class="totalchecked">0 selected <i class="fas fa-trash"></i> </div>
+            <input type="checkbox" id="checkall" >
+            <div class="totalchecked">0 selected</div>
         </div>
 
         
@@ -142,7 +143,7 @@ $users = getUsers();
                     <tr>
                     <td>
                         
-                            <input type='checkbox' name='checkbox[]' value='<?= $user['id'] ?>' >
+                            <input id="contador" type='checkbox' class="checkbox" name='checkbox[]' value='<?= $user['id'] ?>' >
                             
                         </form>
                         
@@ -183,6 +184,9 @@ $users = getUsers();
                 <?php endforeach;;?>
             </tbody>
         </table>
+
+        <button type='submit' value='delete records' id="delete" name='delete'><i class="fas fa-trash"></i></button>
+        
 
     </div>
 

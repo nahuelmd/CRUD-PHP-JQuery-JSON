@@ -258,10 +258,31 @@ contenedor-tabla{
 
 
 /* BOTON TRASH */
-body > div > div.right-side-section.w-100 > div.contador-checkbox {
-    margin-left: 15px;
-    
+body > div > div.right-side-section.w-100 > div.contador-checkbox {    
+    position: absolute;
+    top: 190px;
+    left: 470px;
+    z-index: 1;
 }
+
+.totalchecked{
+    
+
+}
+
+#delete{
+    position: absolute;
+    top: 190px;
+    left: 600px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+}
+#delete:hover{
+    color: red;
+}
+
+
 
 
 body > div > div.right-side-section.w-100 > div.contador-checkbox > div > i{
@@ -396,9 +417,6 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
 #tablaContactos_filter{
     text-align: left;
 
-}
-.totalchecked{
-    margin-top: 50px;
 }
 
 

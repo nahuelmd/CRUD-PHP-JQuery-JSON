@@ -29,15 +29,20 @@
     </script>
     
 
-    
+    <!-- CHECK ALL -->
+    <script>
+    $('#checkall').change(function(){
+        $('.checkbox').prop("checked", $(this).prop("checked"))
+    })
+    </script>
 
 
     
     <!-- Muestra cantidad de checkbox marcados -->
     <script>        
     $('input[type=checkbox]').change(function(){
-        var number = $('input[type=checkbox]:checked').length;
-        $('.totalchecked').html(number + ' selected' + ' <i class="fas fa-trash" ></i>'  );            
+        var number = $('input[id=contador]:checked').length;
+        $('.totalchecked').html(number + ' selected'  );            
     });
     </script>
 
@@ -170,7 +175,7 @@ jQuery('#tablaContactos').ddTableFilter();
 </script>
 
 
-
+<!-- LABEL DE FORM -->
 <script>
         $(function() {
     $(".form-control").focus(function() {
@@ -181,6 +186,9 @@ jQuery('#tablaContactos').ddTableFilter();
 
     });
 </script>
+
+
+
 
     
     

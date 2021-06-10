@@ -28,25 +28,5 @@
         "profile_rate": "10",
         "last_access": "1607699224",
         "extension": "jpg"
-    },
-    {
-        "id": 4,
-        "name": "Rebecca Moore",
-        "mail": "rebecca.moore@gmail.com",
-        "company": "Upwork",
-        "role": "Manager",
-        "profile_rate": "25",
-        "last_access": "1607699222",
-        "extension": "jpg"
-    },
-    {
-        "id": 5,
-        "name": "Jane Doe",
-        "mail": "jane.doe@gmail.com",
-        "company": "Trello",
-        "role": "Engineer",
-        "profile_rate": 30,
-        "last_access": 1607699222,
-        "extension": "jpg"
     }
 ]
