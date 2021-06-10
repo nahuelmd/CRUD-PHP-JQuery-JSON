@@ -133,10 +133,10 @@ function validateUser($user, &$errors){
         $errors['role'] = 'Role is required and must be more than 2 and less than 50 characters';
     }
 
-    if (!filter_var($user['profile_rate'], FILTER_VALIDATE_INT)){
-        $isValid = false; 
-        $errors['profile_rate'] = 'Profile rate is required and must be a number';
-    }
+    // if (!filter_var($user['profile_rate'], FILTER_VALIDATE_INT)){
+    //     $isValid = false; 
+    //     $errors['profile_rate'] = 'Profile rate is required and must be a number';
+    // }
 
     //VALIDATION ENDS
 

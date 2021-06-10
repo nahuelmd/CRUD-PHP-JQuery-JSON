@@ -465,3 +465,85 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     visibility: visible;
 
 }
+
+/* MODATAL START */
+
+#exampleModal > div > div > div.modal-header {
+    border: none;
+}
+
+
+#exampleModal > div > div > div.modal-body > div > div{
+    border: none;
+}
+/* Ventana */
+
+#exampleModal > div > div{
+    width: 700px;
+}
+
+/* TITULO */
+#exampleModal > div > div > div.modal-body > div > div > div.card-header{
+    background-color: var(--blanco);
+    border: none;
+
+}
+/* INPUTS */
+#exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div > input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0%;
+}
+
+
+#exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div.company-position-section > div> input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0%;
+
+}
+
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
+.custom-select:invalid:focus, .custom-select.is-invalid:focus{
+    border-color: var(--grisClaroform);
+    box-shadow: none;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
+.custom-select:invalid, .custom-select.is-invalid{
+    border-color: var(--grisClaroform);
+}
+
+.form-control:focus{
+    border-color: var(--grisClaroform);
+}
+
+label{
+    color: var(--grisClaroform);
+}
+
+/* .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
+.custom-select:invalid:focus, .custom-select.is-invalid:focus{
+    border: none;
+} */
+/* .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
+.custom-select:invalid, .custom-select.is-invalid{
+    border: none;
+} */
+
+/* COMPANY AND POSITION */
+#exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div.company-position-section{
+    display: flex;
+    flex-direction: row;
+}
+
+#exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div:nth-child(3){
+    width: 100%;
+}
+
+#exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div.company-position-section > div:nth-child(1) > input{
+    width: 80%;
+}
+
+/* MODATAL END */

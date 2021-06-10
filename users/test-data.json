@@ -48,55 +48,5 @@
         "profile_rate": 30,
         "last_access": 1607699222,
         "extension": "jpg"
-    },
-    {
-        "id": 6,
-        "name": "Jones Dermot",
-        "mail": "dermot.jones@gmail.com",
-        "company": "Slack",
-        "role": "Developer",
-        "profile_rate": 40,
-        "last_access": 1607699222,
-        "extension": "jpg"
-    },
-    {
-        "id": 7,
-        "name": "Martin Merces",
-        "mail": "martin.merces@gmail.com",
-        "company": "Google",
-        "role": "Manager",
-        "profile_rate": 60,
-        "last_access": 1607699222,
-        "extension": "jpg"
-    },
-    {
-        "id": 8,
-        "name": "Franz Ferdinand",
-        "mail": "franz.ferdinand@gmail.com",
-        "company": "Facebook",
-        "role": "Manager",
-        "profile_rate": 100,
-        "last_access": 1607699222,
-        "extension": "jpg"
-    },
-    {
-        "id": 9,
-        "name": "John Smith",
-        "mail": "john.smith@gmail.com",
-        "company": "Skype",
-        "role": "CEO",
-        "profile_rate": 75,
-        "last_access": 1607699222,
-        "extension": "jpg"
-    },
-    {
-        "id": 10,
-        "name": "Judith Williams",
-        "mail": "judith.williams@gmail.com",
-        "company": "Google",
-        "role": "Designer",
-        "profile_rate": 45,
-        "last_access": 1607699222,
-        "extension": "jpg"
     }
 ]

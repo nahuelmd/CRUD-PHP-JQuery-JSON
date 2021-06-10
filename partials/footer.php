@@ -170,6 +170,19 @@ jQuery('#tablaContactos').ddTableFilter();
 </script>
 
 
+
+<script>
+        $(function() {
+
+    $(".form-control").focus(function() {
+    $(this).prev("label").css("color", "var(--defaultPrimario)"); //hide label of clicked item 
+    }).blur(function() {
+    $(this).prev("label").css("color", "var(--grisClaroform)");
+    });
+
+    });
+</script>
+
     
     
 
