@@ -173,11 +173,10 @@ jQuery('#tablaContactos').ddTableFilter();
 
 <script>
         $(function() {
-
     $(".form-control").focus(function() {
-    $(this).prev("label").css("color", "var(--defaultPrimario)"); //hide label of clicked item 
+    $(this).prev("label").css("color", "var(--defaultPrimario)").css("visibility", "visible"); //hide label of clicked item 
     }).blur(function() {
-    $(this).prev("label").css("color", "var(--grisClaroform)");
+    $(this).prev("label").css("color", "var(--grisClaroform)").css("visibility", "hidden");
     });
 
     });

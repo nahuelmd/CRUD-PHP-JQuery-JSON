@@ -14,17 +14,17 @@
             <form method="POST" action="" enctype="multipart/form-data" >
                 <div class="form-group">
                 <label for="">First name</label>
-                <input class="form-control 
+                <input class="form-control pl-0 
                     <?php echo ($errors['name']) ? 'is-invalid' : '' ?>" 
-                    type="text" name="name" value="<?php echo $user['name'] ?>">
+                    type="text" name="name" placeholder="First name" value="<?php echo $user['name'] ?>">
                 <div class="invalid-feedback">
                     <?php echo $errors['name'] ?>
                 </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" >
                 <label for="">Email</label>
-                <input class="form-control <?php echo ($errors['mail']) ? 'is-invalid' : '' ?>" type="text" name="mail" value="<?php echo $user['mail'] ?>">
+                <input class="form-control pl-0 <?php echo ($errors['mail']) ? 'is-invalid' : '' ?>" type="text" name="mail" placeholder="Email" value="<?php echo $user['mail'] ?>">
                 <div class="invalid-feedback">
                     <?php echo $errors['mail'] ?>
                 </div>
@@ -33,15 +33,15 @@
                 <div class="company-position-section">
                     <div class="form-group">
                     <label for="">Company</label>
-                    <input class="form-control <?php echo ($errors['company']) ? 'is-invalid' : '' ?>" type="text" name="company" value="<?php echo $user['company'] ?>">
+                    <input class="form-control pl-0<?php echo ($errors['company']) ? 'is-invalid' : '' ?>" type="text" name="company" placeholder="Company" value="<?php echo $user['company'] ?>">
                     <div class="invalid-feedback">
                         <?php echo $errors['company'] ?>
                     </div>
                     </div>
     
                     <div class="form-group">
-                    <label for="">Position</label>
-                    <input class="form-control <?php echo ($errors['role']) ? 'is-invalid' : '' ?>" type="text" name="role" value="<?php echo $user['role'] ?>">
+                    <label id="laberl-form" for="">Position</label>
+                    <input class="form-control pl-0 <?php echo ($errors['role']) ? 'is-invalid' : '' ?>" type="text" name="role" placeholder="Position" value="<?php echo $user['role'] ?>">
                     <div class="invalid-feedback">
                         <?php echo $errors['role'] ?>
                     </div>
@@ -68,7 +68,7 @@
 
                 <input class="form-control-file" type="file" name="userfile" >
                 </div>
-                <button class="btn btn-success" >Submit</button>                     
+                <button class="btn btn-primary" id="boton-enviar-form" >Save</button>                     
             </form>
 
 

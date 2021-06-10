@@ -494,6 +494,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     border-right: none;
     border-left: none;
     border-radius: 0%;
+    
 }
 
 
@@ -502,6 +503,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     border-right: none;
     border-left: none;
     border-radius: 0%;
+    padding: 0px;
 
 }
 
@@ -519,18 +521,51 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     border-color: var(--grisClaroform);
 }
 
-label{
+#laberl-form{
     color: var(--grisClaroform);
+    visibility: hidden;
+    
+    
 }
 
-/* .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
-.custom-select:invalid:focus, .custom-select.is-invalid:focus{
-    border: none;
-} */
-/* .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
-.custom-select:invalid, .custom-select.is-invalid{
-    border: none;
-} */
+/* BOTONES */
+
+#boton-cancel{
+    background-color: var(--defaultSecundario);
+    color: var(--defaultPrimario);
+}
+#boton-cancel:hover{
+    background-color: var(--hoverSecundario);
+    color: var(--hoverPrimario);
+}
+
+#boton-enviar-form{
+    position: absolute;
+    bottom: -70px;
+    right: 70px;
+    color: var(--blanco);
+    background-color: var(--defaultPrimario);
+}
+
+#boton-enviar-form:hover{
+    color: var(--blanco);
+    background-color: var(--hoverPrimario);
+}
+
+/* BOTON CERRAR VENTANA */
+#exampleModal > div > div > div.modal-header > button{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    z-index: 1;
+    
+}
+
+#exampleModal > div > div > div.modal-header > button > span{
+    color: black;
+    font-size: 30px;
+    
+}
 
 /* COMPANY AND POSITION */
 #exampleModal > div > div > div.modal-body > div > div > div.card-body > form > div.company-position-section{
