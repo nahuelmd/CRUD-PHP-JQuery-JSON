@@ -3,7 +3,6 @@ include '../saleslayer/partials/header.php';
 require '../saleslayer/users/users.php';
 $users = getUsers();
 ?>
-<!-- Vertically centered modal -->
 
 
 <div class="main-container">
@@ -47,6 +46,7 @@ $users = getUsers();
 
 
 
+
     <div class="right-side-section w-100">
 
 
@@ -59,11 +59,21 @@ $users = getUsers();
         <div class="spacer200"></div>
         <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->
         <div class="contador-checkbox">
-            <input type="checkbox" id="checkall" >
-            <div class="totalchecked">0 selected</div>
-        </div>
 
+            <div class="round">
+
+                <input class="totalchecked" id="checkall" type="checkbox" style="text-align: center;"  >
+                
+                <label class="totalchecked2" id="jamon" for="checkall"></label>
+
+            </div>
+            
+            
+            <!-- <div class="totalchecked2"> selected</div> -->
+
+        </div>
         
+            
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" id="botoncreate" data-toggle="modal" data-target="#exampleModal">
         Add contact
@@ -145,6 +155,7 @@ $users = getUsers();
                         
                             <input id="contador" type='checkbox' class="checkbox" name='checkbox[]' value='<?= $user['id'] ?>' >
                             
+                            
                         </form>
                         
                     </td>
@@ -195,7 +206,8 @@ $users = getUsers();
 
 
 </div>
-  
+
+
 
 <?php
 include '../saleslayer/partials/footer.php'

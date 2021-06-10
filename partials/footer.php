@@ -42,9 +42,27 @@
     <script>        
     $('input[type=checkbox]').change(function(){
         var number = $('input[id=contador]:checked').length;
-        $('.totalchecked').html(number + ' selected'  );            
+        console.log(number)
+        $('head').append(`<style>.totalchecked2::after{ content:'${number}' }</style>`);
+        //  $('.totalchecked2').html(number + ' selected'  ); 
+         $('.totalchecked2').html(number ); 
+        
+        // var pepa = document.querySelector("#jamon");
+        // pepa.style.color = "red";
+        // pepa.style.attr(data-content) = "red";
+
     });
+    
+    
+    
     </script>
+
+    <script>
+        // var number = 5
+        // $('head').append(`<style>#jamon::after{ content:'${number}' }</style>`);
+    </script>
+
+
 
 
     <!-- HIDE MENU -->
@@ -113,7 +131,7 @@
                     hidder.style.display = "inline";
                     
                     
-                    trash.style.left= "600px";
+                    trash.style.left= "612px";
                     contadorCheckbox.style.left= "470px";
                     
                     
@@ -188,7 +206,7 @@
                     buscador.style.width = "80vw";
 
                     
-                    trash.style.left= "600px";
+                    trash.style.left= "612px";
                     contadorCheckbox.style.left= "470px";
                     
                 
@@ -225,7 +243,20 @@ jQuery('#tablaContactos').ddTableFilter();
 </script>
 
 
+<!-- FILTRO CON ICONOS -->
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap-select.js"></script>
+
+<script>
+$(document).ready(function() {
+  // Initiate with custom caret icon
+  $('select.form-control').form-control({
+    caretIcon: 'glyphicon glyphicon-menu-down'
+  });
+});
+
+</script>
 
     
     

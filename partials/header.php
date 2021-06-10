@@ -29,6 +29,13 @@
         
         <link href="/assets/css/bootstrap.css.map" rel="stylesheet" >
         <link href="/assets/css/bootstrap.css" rel="stylesheet" >
+
+        <!-- PRUEBA FILTRO -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/boostrap-select.css">
+        <!-- FIN PRUEBA FILTRO -->
+
+
         <link href="/assets/css/styles.css" rel="stylesheet" >
 
                 
