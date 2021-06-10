@@ -265,6 +265,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox {
     top: 250px;
     left: 470px;
     z-index: 1;
+    transition: 500ms;
 }
 
 #checkall{
@@ -281,6 +282,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox {
     z-index: 1;
     background-color: transparent;
     border: none;
+    transition: 500ms;
 }
 #delete:hover{
     color: red;

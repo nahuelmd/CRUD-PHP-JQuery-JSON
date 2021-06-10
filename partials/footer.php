@@ -46,6 +46,8 @@
     });
     </script>
 
+
+    <!-- HIDE MENU -->
     <script>
         window.onload = function myFunction() {
             var x = document.getElementById("sidebar-container");
@@ -61,7 +63,13 @@
             var logo = document.getElementById("esconderlogo");
             var hidder = document.getElementById("esconderHider");
             var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");
+            
+            
+            var trash = document.getElementById("delete");
+            var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
+            
 
+            
             
             
             if (titulo.style.display == "inline") {
@@ -79,6 +87,13 @@
                 logo.style.display = "none";
                 hidder.style.display = "none";
                 buscador.style.left = "4vw";
+                
+                
+                
+                trash.style.left= "300px";
+                contadorCheckbox.style.left= "170px";
+                
+                
 
 
             } else {
@@ -96,6 +111,12 @@
                     mail.style.display = "inline";
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
+                    
+                    
+                    trash.style.left= "600px";
+                    contadorCheckbox.style.left= "470px";
+                    
+                    
 
                 
             }
@@ -116,6 +137,12 @@
             var logo = document.getElementById("esconderlogo");
             var hidder = document.getElementById("esconderHider");
             var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");
+            
+            
+            var trash = document.getElementById("delete");
+            var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
+            
+            
 
             
             
@@ -136,6 +163,11 @@
                 buscador.style.left = "4vw";
                 buscador.style.width = "96vw";
 
+                
+                trash.style.left= "300px";
+                contadorCheckbox.style.left= "170px";
+                
+
             } else {
                 console.log('PASO ya ALGO');
                 console.log('PASO va a pasar ALGO');
@@ -154,6 +186,11 @@
                     hidder.style.display = "inline";
                     buscador.style.left = "20vw";
                     buscador.style.width = "80vw";
+
+                    
+                    trash.style.left= "600px";
+                    contadorCheckbox.style.left= "470px";
+                    
                 
             }
 
