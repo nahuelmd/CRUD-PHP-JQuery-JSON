@@ -1,23 +1,16 @@
 <?php
-
 ob_start();
-
 include '../saleslayer/partials/header.php';
 require '../saleslayer/users/users.php';
 $users = getUsers();
 ?>
-
-
 <div class="main-container">
-
-
     <div class="d-flex" id="myLinks">
         <div id="sidebar-container" class="" >
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="">
                 <h4 class="font-weight-bold" ><span id="esconderlogo">Dashboard Kit</span></h4>
             </div>
-
             <div class="user-section">
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="Avatar" class="md-avatar rounded-circle">                
@@ -39,20 +32,12 @@ $users = getUsers();
                 <a href="#" class="d-block p-2"><i class="bi bi-three-dots mr-2 lead"></i>&nbsp;&nbsp;&nbsp;&nbsp; <span id="esconderSettings" >Settings</span> </a>                                
             </div>
             <div class="bottom-section">
-
                 <a href="javascript:void(0);" onclick="myFunction()" class="d-block p-2"><i id="bottom-icon" class="bi bi-layout-sidebar-inset mr-2 lead"></i>&nbsp;&nbsp;&nbsp;&nbsp; <span id="esconderHider">Togle Sidebar</span> </a>                                
-
             </div>  
-        </div>
-         
+        </div>         
     </div> 
 
-
-
-
     <div class="right-side-section w-100">
-
-
         <div class="notification-section">
             <div class="circulo"></div>
             <div class="bell">
@@ -60,35 +45,21 @@ $users = getUsers();
             </div>            
         </div>
         <div class="spacer200"></div>
-        <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->
-        
+        <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->        
         <div class="text-company-filter">
             <p>Company:</p>
-        </div>
-        
+        </div>        
         <div class="contador-checkbox">
-
             <div class="round">
-
-                <input class="totalchecked" id="checkall" type="checkbox" style="text-align: center;"  >
-                
+                <input class="totalchecked" id="checkall" type="checkbox" style="text-align: center;"  >                
                 <label class="totalchecked2"  for="checkall"></label>
-
                 <p class="selected-text">selected</p>
-
             </div>
-            
-            
-            <!-- <div class="totalchecked2"> selected</div> -->
-
-        </div>
-        
-            
+        </div>                    
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" id="botoncreate" data-toggle="modal" data-target="#exampleModal">
         Add contact
         </button>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -124,18 +95,12 @@ $users = getUsers();
                     $isValid = validateUser($user, $errors);
                     if($isValid){
                     $user = createUser(($_POST));    
-                    uploadImage($_FILES['userfile'], $user);    
-                    
-                    
+                    uploadImage($_FILES['userfile'], $user);                                            
                     }
-                    header("Location: clean-form.php");
-                    
+                    header("Location: clean-form.php");                    
                 }
                 ?>
                 <?php include '_form.php'; ?>
-
-
-
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="boton-cancel" data-dismiss="modal">Cancel</button>
@@ -144,8 +109,6 @@ $users = getUsers();
     </div>
     </div>
     </div>
-
-
     <div class="table-container">
         <form action="delete-multi.php" method="POST">
         <table id="tablaContactos" class="table">
@@ -162,27 +125,21 @@ $users = getUsers();
                     <th class="hide-crud">CRUD</th>
                 </tr>
             </thead>
-
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
                     <td>    
                         <div class="round2">
-
                             <input id="contador" type='checkbox' class="checkbox" name='checkbox[]' value='<?= $user['id'] ?>' >
                             <label class="check-tabla" id="contador" for=""></label>
-                        </div>
-                            
-                            
-                        </form>
-                        
+                        </div>                                                        
+                        </form>                        
                     </td>
                         <td>
                             <?php if (isset($user['extension'])): ?>
                                 <img src="<?php echo "users/images/${user['id']}.${user['extension']}" ?>" alt="">
                             <?php endif; ?>
                         </td>
-
                         <td><?php echo $user['name'] ?></td>
                         <td>
                             <a href="mailto:<?php echo $user['mail'] ?>"><?php echo $user['mail']?></a>
@@ -195,9 +152,7 @@ $users = getUsers();
                             $fecha_actual = date("Y-m-d");
                             $resta = strtotime($ultimoAcceso) - strtotime($fecha_actual);
                             $diferencia = intval($resta / 86400000);
-                            $limpio = abs($diferencia);
-                        
-                        
+                            $limpio = abs($diferencia);                                                
                         ?>
                         <td><?php echo $limpio ." days ago" ?></td>                        
                         <td class="hide-crud">
@@ -213,20 +168,10 @@ $users = getUsers();
                 <?php endforeach;;?>
             </tbody>
         </table>
-
-        <button type='submit' value='delete records' id="delete" name='delete'><i class="fas fa-trash"></i></button>
-        
-
+        <button type='submit' value='delete records' id="delete" name='delete'><i class="fas fa-trash"></i></button>        
     </div>
-
 </div>
-
-
-
 </div>
-
-
-
 <?php
 include '../saleslayer/partials/footer.php';
 ob_end_flush();

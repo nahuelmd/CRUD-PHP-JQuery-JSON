@@ -1,7 +1,6 @@
 <?php
 ob_start();
 ?>
-
 <?php 
 include 'partials/header.php';
 require __DIR__.'/users/users.php';
@@ -10,7 +9,6 @@ if(!isset($_GET['id'])){
     include "../saleslayer/partials/not_found.php";
     exit;
 }
-
 $userId = $_GET['id'];
 
 $user = getUserById($userId);
@@ -33,23 +31,17 @@ $errors = [
 ];
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {    
-    
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {        
     $user = array_merge($user, $_POST);
-
     $isValid = validateUser($user, $errors);
-
     if($isValid){ 
         $user = updateUser($_POST, $userId);        
         uploadImage($_FILES['userfile'], $user);            
         header("Location: index.php");
     }
-}
- 
+} 
 ?> 
-
 <?php include '_form.php'; ?>
-
 <?php
 include '../saleslayer/partials/footer.php';
 ?>
