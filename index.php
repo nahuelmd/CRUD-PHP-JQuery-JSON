@@ -71,7 +71,7 @@ $users = getUsers();
                 
                 <label class="totalchecked2" id="jamon" for="checkall"></label>
 
-                <p class="selected">selected</p>
+                <p class="selected-text">selected</p>
 
             </div>
             
