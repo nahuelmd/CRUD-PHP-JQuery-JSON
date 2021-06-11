@@ -151,7 +151,7 @@ $users = getUsers();
                     <th>Role</th>
                     <th>Rate</th>
                     <th>Last Acces</th>
-                    <th>CRUD</th>
+                    <th class="hide-crud">CRUD</th>
                 </tr>
             </thead>
 
@@ -192,7 +192,7 @@ $users = getUsers();
                         
                         ?>
                         <td><?php echo $limpio ." days ago" ?></td>                        
-                        <td>
+                        <td class="hide-crud">
                             <a href="view.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-info" >VIEW</a>
                             <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-sm btn-outline-secondary" >UPDATE</a>
                             <!-- <a href="delete.php?id=<?php //echo $user['id']?>" class="btn btn-sm btn-outline-danger" >DELETE</a> -->

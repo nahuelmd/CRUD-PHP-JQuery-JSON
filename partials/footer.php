@@ -46,7 +46,7 @@
         $('head').append(`<style>.totalchecked2::after{ content:'${number}' }</style>`);
         //  $('.totalchecked2').html(number + ' selected'  ); 
          $('.totalchecked2').html(number ); 
-         $('.selected').html(number + ' selected'  ); 
+         $('.selected-text').html(number + ' selected'  ); 
         
         // var pepa = document.querySelector("#jamon");
         // pepa.style.color = "red";

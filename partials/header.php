@@ -43,7 +43,7 @@
                 
     
     
-        <title>Document</title>
+        <title>Dashboard Kit</title>
 
 </head>
 <body>
