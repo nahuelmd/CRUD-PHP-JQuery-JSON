@@ -23,6 +23,7 @@
             search: '<i class="fas fa-search" aria-hidden="true"></i>',
             searchPlaceholder: 'Search for a contact'
             }
+            
         });
         
     } );

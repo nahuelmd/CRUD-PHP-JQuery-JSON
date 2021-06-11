@@ -403,8 +403,14 @@ opacity: 1;
     border: none;
     transition: 500ms;
 }
-#delete:hover{
+#delete > i{
+    color: var(--grisClaroform);
+}
+#delete > i:hover{
     color: red;
+}
+#delete > i{
+    color: var(--grisClaroform);
 }
 /* COMPANY FILTER */
 .text-company-filter{
