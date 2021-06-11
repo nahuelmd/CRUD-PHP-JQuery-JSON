@@ -20,6 +20,16 @@
         "extension": "png"
     },
     {
+        "id": 3,
+        "name": "George Fields",
+        "mail": "george.fields@gmail.com",
+        "company": "Clockify",
+        "role": "CEO",
+        "profile_rate": "10",
+        "last_access": "1607699224",
+        "extension": "png"
+    },
+    {
         "id": 4,
         "name": "Rebecca Moore",
         "mail": "rebecca.moore@gmail.com",
@@ -56,6 +66,36 @@
         "company": "Google",
         "role": "Manager",
         "profile_rate": 60,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 8,
+        "name": "Franz Ferdinand",
+        "mail": "franz.ferdinand@gmail.com",
+        "company": "Facebook",
+        "role": "Manager",
+        "profile_rate": 100,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 9,
+        "name": "John Smith",
+        "mail": "john.smith@gmail.com",
+        "company": "Skype",
+        "role": "CEO",
+        "profile_rate": 75,
+        "last_access": 1607699222,
+        "extension": "jpg"
+    },
+    {
+        "id": 10,
+        "name": "Judith Williams",
+        "mail": "judith.williams@gmail.com",
+        "company": "Google",
+        "role": "Designer",
+        "profile_rate": 45,
         "last_access": 1607699222,
         "extension": "jpg"
     }

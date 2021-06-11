@@ -1,4 +1,7 @@
 <?php
+
+ob_start();
+
 include '../saleslayer/partials/header.php';
 require '../saleslayer/users/users.php';
 $users = getUsers();
@@ -122,11 +125,16 @@ $users = getUsers();
                     if($isValid){
                     $user = createUser(($_POST));    
                     uploadImage($_FILES['userfile'], $user);    
-                    header("Location: index.php");
+                    
+                    
                     }
+                    header("Location: clean-form.php");
+                    
                 }
                 ?>
                 <?php include '_form.php'; ?>
+
+
 
     </div>
     <div class="modal-footer">
@@ -220,5 +228,6 @@ $users = getUsers();
 
 
 <?php
-include '../saleslayer/partials/footer.php'
+include '../saleslayer/partials/footer.php';
+ob_end_flush();
 ?>
