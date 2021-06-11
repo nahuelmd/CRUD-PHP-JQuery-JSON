@@ -16,7 +16,7 @@ $.fn.ddTableFilter = function(options) {
       var selectbox = $('<select class="form-control selectpicker" style="z-index: 4;" >');
       var values = [];
       var opts = [];
-      selectbox.append('<option data-icon="glyphicon glyphicon-briefcase" data-subtext="petrification" value="--all--">' + $(this).text() + '</option>');
+      selectbox.append('<option  data-subtext="" value="--all--">' + $(this).text() + '</option>');
 
       var col = $('tr:not(.skip-filter) td:nth-child(' + (index + 1) + ')', table).each(function() {
         var cellVal = options.valueCallback.apply(this);
@@ -39,7 +39,7 @@ $.fn.ddTableFilter = function(options) {
         opts.sort(options.sortOptCallback);
       }
       $.each(opts, function() {
-        $(selectbox).append('<option data-icon="glyphicon glyphicon-briefcase" data-subtext="petrification" value="' + this.val + '">' + this.text + '</option>')
+        $(selectbox).append('<option data-icon="glyphicon glyphicon-briefcase" data-subtext="" value="' + this.val + '">' + this.text + '</option>')
       });
 
       $(this).wrapInner('<div style="display:none">');

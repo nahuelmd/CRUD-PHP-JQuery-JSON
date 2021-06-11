@@ -6,6 +6,7 @@
     --textos: rgb(44, 52, 62);
     --defaultPrimario: rgb(0, 143, 234);
     --hoverPrimario: rgb(33, 164, 244);
+    --Checkbox:rgb(68,156,234);
     --defaultSecundario: rgb(231, 244, 254);
     --hoverSecundario: rgb(207, 234, 254);
     --grisOscurofondo: rgb(88, 95, 103);
@@ -192,9 +193,6 @@ a{
 }
 
 
-.prueba{
-    background-color: green;
-}
 
 
 /* Tabla Datatables */
@@ -280,48 +278,120 @@ position: relative;
 width: 50px;
 height: 50px;
 display: flex;
+flex-direction: row;
 justify-content: center;
+left: -48px;
+}
+
+body > div > div.right-side-section.w-100 > div.contador-checkbox > div > p{
+    position: relative;
+    left: 50px;
+    white-space: nowrap;
 }
 
 .round label {
     width: 28px;
     height: 28px;
+    line-height: 28px;
     position: absolute;
     left: 0;
     top: 0;
     text-align: center;
-    background-color: red;
+    background-color: var(--Checkbox);
+    color: var(--blanco);
+    font-weight: 900;
+    font-family: 'Righteous', cursive;
+    font-size: 15px;
     border: 1px solid #ccc;
-    border-radius: 50%;
+    border-radius: 25%;
     cursor: pointer;
 }  
+
 .round label:after {
     width: 28px;
     height: 28px;
-    /* border: 2px solid #fff; */
-    /* border-top: none;
-    border-right: none; */
     content: "";
     left: 7px;
     opacity: 0;
     position: absolute;
     top: 8px;
-    /* transform: rotate(-45deg); */
 }
 .round input[type="checkbox"] {
 visibility: hidden;
 text-align: center;
 }
 .round input[type="checkbox"]:checked + label {
-background-color: #66bb6a;
-border-color: #66bb6a;
+    background-color: var(--Checkbox);
+    color: var(--blanco);
 }
 
 .round input[type="checkbox"]:checked + label:after {
 opacity: 1;
 }
 
-/* TERMINA CHECKBOX */
+/* INICIA CHECKBOX TABLA */
+
+.round2 input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    border-color: var(--grisClarofondo);
+    
+}
+
+/* .round2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .round2 label {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        background-color: red;
+        color: var(--blanco);
+        font-weight: 900;
+        font-family: 'Righteous', cursive;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 25%;
+        cursor: pointer;
+    }  
+    
+    .round2 label:after {
+        width: 28px;
+        height: 28px;
+        content: "";
+        left: 7px;
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+
+    }
+    .round2 input[class="checkbox"] {
+    visibility: hidden;
+    text-align: center;
+    }
+    .round2 input[class="checkbox"]:checked + label {
+        background-color: var(--Checkbox);
+        color: var(--blanco);
+    }
+    
+    .round2 input[class="checkbox"]:checked + label:after {
+    opacity: 1;
+    } */
+
+
+
+/* TERMINA CHECKBOX TABLA */
+
+/* TERMINA CHECKBOX GENERAL */
 
 #delete{
     position: absolute;
@@ -336,7 +406,12 @@ opacity: 1;
     color: red;
 }
 /* COMPANY FILTER */
-
+.text-company-filter{
+    position: absolute;
+    top: 105px;
+    left: 420px;
+    transition: 500ms;
+}
 
 #tablaContactos > thead > tr > th:nth-child(5) > select {
     position: absolute;
@@ -356,9 +431,17 @@ opacity: 1;
 .btn-group>.btn:first-child {
     position: absolute;
     top: -100px;
-    width: 200px;
+    left: 50px;
+    width: 55px;
     z-index: 1;
+    border: none;
+    background-color: transparent;
+    
 }
+.bootstrap-select.btn-group .btn .filter-option {
+    color: var(--hoverPrimario);
+}
+
 .table>thead>tr>th {
     border: none;
 }
@@ -419,7 +502,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 100vw;
-        min-width: 79vw;
+        min-width: 78vw;
     }
     }
 
@@ -462,13 +545,13 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     z-index: 1;
 }
 #tablaContactos_filter > label {
-    width: 100%;
+    width: 80vw;
     min-width: 100%;
     margin-left: 0px;
     display: flex;
     justify-content: center;
     margin-right: 0px;
-    margin-left: 0px;
+    margin-left: 2vw;
     border-color: transparent;
     
 }
@@ -477,7 +560,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     width: 100%;
     min-width: 100%;
     margin-left: 0px;
-    height: 50px;
+    height: 60px;
     border-color: transparent;
     /* background: no-repeat url(/assets/img/search-solid.png);
     background-size: 20px;
@@ -648,9 +731,13 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
 
 #laberl-form{
     color: var(--grisClaroform);
-    visibility: hidden;
-    
-    
+    visibility: hidden;        
+}
+
+@media (min-width: 1200px){
+.container {
+    width: 600px;
+}
 }
 
 /* BOTONES */

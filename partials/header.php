@@ -16,6 +16,8 @@
 
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
                 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"

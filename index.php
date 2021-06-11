@@ -58,6 +58,11 @@ $users = getUsers();
         </div>
         <div class="spacer200"></div>
         <!-- <p> <a href="create.php" class="btn btn-outline-success" id="botoncreate">Add Contact</a></p> -->
+        
+        <div class="text-company-filter">
+            <p>Company:</p>
+        </div>
+        
         <div class="contador-checkbox">
 
             <div class="round">
@@ -65,6 +70,8 @@ $users = getUsers();
                 <input class="totalchecked" id="checkall" type="checkbox" style="text-align: center;"  >
                 
                 <label class="totalchecked2" id="jamon" for="checkall"></label>
+
+                <p class="selected">selected</p>
 
             </div>
             
@@ -151,9 +158,12 @@ $users = getUsers();
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
-                    <td>
-                        
+                    <td>    
+                        <div class="round2">
+
                             <input id="contador" type='checkbox' class="checkbox" name='checkbox[]' value='<?= $user['id'] ?>' >
+                            <label class="check-tabla" id="contador" for=""></label>
+                        </div>
                             
                             
                         </form>

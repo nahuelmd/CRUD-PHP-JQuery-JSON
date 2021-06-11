@@ -37,15 +37,16 @@
     </script>
 
 
-    
+
     <!-- Muestra cantidad de checkbox marcados -->
     <script>        
     $('input[type=checkbox]').change(function(){
-        var number = $('input[id=contador]:checked').length;
+        var number = $('input[class=checkbox]:checked').length;
         console.log(number)
         $('head').append(`<style>.totalchecked2::after{ content:'${number}' }</style>`);
         //  $('.totalchecked2').html(number + ' selected'  ); 
          $('.totalchecked2').html(number ); 
+         $('.selected').html(number + ' selected'  ); 
         
         // var pepa = document.querySelector("#jamon");
         // pepa.style.color = "red";
@@ -86,7 +87,7 @@
             var trash = document.getElementById("delete");
             var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
             
-
+            var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
             
             
             
@@ -107,9 +108,9 @@
                 buscador.style.left = "4vw";
                 
                 
-                
                 trash.style.left= "300px";
                 contadorCheckbox.style.left= "170px";
+                textCompany.style.left= "100px";
                 
                 
 
@@ -133,7 +134,7 @@
                     
                     trash.style.left= "612px";
                     contadorCheckbox.style.left= "470px";
-                    
+                    textCompany.style.left= "420px";
                     
 
                 
@@ -159,6 +160,7 @@
             
             var trash = document.getElementById("delete");
             var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
+            var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
             
             
 
@@ -179,11 +181,12 @@
                 logo.style.display = "none";
                 hidder.style.display = "none";
                 buscador.style.left = "4vw";
-                buscador.style.width = "96vw";
+                buscador.style.width = "94vw";
 
                 
                 trash.style.left= "300px";
                 contadorCheckbox.style.left= "170px";
+                textCompany.style.left= "100px";
                 
 
             } else {
@@ -203,12 +206,12 @@
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
                     buscador.style.left = "20vw";
-                    buscador.style.width = "80vw";
+                    buscador.style.width = "78vw";
 
                     
                     trash.style.left= "612px";
                     contadorCheckbox.style.left= "470px";
-                    
+                    textCompany.style.left= "420px";
                 
             }
 
