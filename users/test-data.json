@@ -68,15 +68,5 @@
         "profile_rate": 100,
         "last_access": 1607699222,
         "extension": "jpg"
-    },
-    {
-        "id": 9,
-        "name": "John Smith",
-        "mail": "john.smith@gmail.com",
-        "company": "Skype",
-        "role": "CEO",
-        "profile_rate": 75,
-        "last_access": 1607699222,
-        "extension": "jpg"
     }
 ]

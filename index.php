@@ -69,7 +69,7 @@ $users = getUsers();
 
                 <input class="totalchecked" id="checkall" type="checkbox" style="text-align: center;"  >
                 
-                <label class="totalchecked2" id="jamon" for="checkall"></label>
+                <label class="totalchecked2"  for="checkall"></label>
 
                 <p class="selected-text">selected</p>
 

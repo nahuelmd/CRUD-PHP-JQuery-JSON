@@ -82,19 +82,16 @@
             var mail = document.getElementById("esconderMailAdmin"); 
             var logo = document.getElementById("esconderlogo");
             var hidder = document.getElementById("esconderHider");
-            var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");
-            
-            
+            var buscador = document.querySelector("#tablaContactos_wrapper > div:nth-child(1) > div:nth-child(2)");                    
             var trash = document.getElementById("delete");
             var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
             
-            var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
-            
-            
-            
+            // var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
+                        
             if (titulo.style.display == "inline") {
                 
                 x.style.width = "4vw";
+                x.style.minWidth = "4vw";
                 titulo.style.display = "none";
                 titulo2.style.display = "none";
                 titulo3.style.display = "none";
@@ -106,20 +103,23 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "4vw";
+                
+                buscador.style.left = "5%";
+                
+                buscador.style.width = "80%";
                 
                 
-                trash.style.left= "300px";
+                trash.style.left= "25%";
                 contadorCheckbox.style.left= "170px";
-                textCompany.style.left= "100px";
-                
-                
+                // textCompany.style.left= "6vw";
 
 
             } else {
                 
 
                     x.style.width = "20vw";
+                    x.style.maxwidth = "320px";
+                    x.style.minWidth = "4vw";
                     titulo.style.display = "inline";
                     titulo2.style.display = "inline";
                     titulo3.style.display = "inline";
@@ -132,10 +132,12 @@
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
                     
-                    
-                    trash.style.left= "612px";
-                    contadorCheckbox.style.left= "470px";
-                    textCompany.style.left= "420px";
+                    buscador.style.left = "15vw";
+
+                    buscador.style.width = "80%";
+                    trash.style.left= "40%";
+                    contadorCheckbox.style.left= "25.5%";
+                    // textCompany.style.left= "19vw";
                     
 
                 
@@ -161,15 +163,13 @@
             
             var trash = document.getElementById("delete");
             var contadorCheckbox = document.querySelector("body > div > div.right-side-section.w-100 > div.contador-checkbox");
-            var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
-            
-            
-
+            // var textCompany = document.querySelector("body > div > div.right-side-section.w-100 > div.text-company-filter")
             
             
             if (titulo.style.display === "inline") {
                 console.log('Lo como inline');
                 x.style.width = "4vw";
+                x.style.minWidth = "100px";
                 titulo.style.display = "none";
                 titulo2.style.display = "none";
                 titulo3.style.display = "none";
@@ -181,13 +181,14 @@
                 mail.style.display = "none";
                 logo.style.display = "none";
                 hidder.style.display = "none";
-                buscador.style.left = "4vw";
-                buscador.style.width = "94vw";
+                
+                buscador.style.left = "5%";
+                buscador.style.width = "90%";
 
                 
-                trash.style.left= "300px";
-                contadorCheckbox.style.left= "170px";
-                textCompany.style.left= "100px";
+                trash.style.left= "25%";
+                contadorCheckbox.style.left= "12.5%";
+                // textCompany.style.left= "125px";
                 
 
             } else {
@@ -195,6 +196,8 @@
                 console.log('PASO va a pasar ALGO');
 
                     x.style.width = "20vw";
+                    x.style.maxWidth = "320px";
+                    x.style.minWidth = "4vw";
                     titulo.style.display = "inline";
                     titulo2.style.display = "inline";
                     titulo3.style.display = "inline";
@@ -206,13 +209,14 @@
                     mail.style.display = "inline";
                     logo.style.display = "inline";
                     hidder.style.display = "inline";
-                    buscador.style.left = "20vw";
-                    buscador.style.width = "78vw";
+
+                    buscador.style.left = "19%";
+                    buscador.style.width = "80%";
 
                     
-                    trash.style.left= "612px";
-                    contadorCheckbox.style.left= "470px";
-                    textCompany.style.left= "420px";
+                    trash.style.left= "40%";
+                    contadorCheckbox.style.left= "25.5%";
+                    // textCompany.style.left= "19vw";
                 
             }
 
