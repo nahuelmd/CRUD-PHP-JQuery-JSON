@@ -295,13 +295,13 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div > p{
     line-height: 28px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -5px;
     text-align: center;
     background-color: var(--Checkbox);
     color: var(--blanco);
     font-weight: 900;
     font-family: 'Righteous', cursive;
-    font-size: 15px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 25%;
     cursor: pointer;
@@ -540,7 +540,7 @@ body > div > div.right-side-section.w-100 > div.contador-checkbox > div{
     color: #c4cfde;
     background-color:transparent;
     height: 50px;
-    line-height: 50px;
+    line-height: 60px;
     margin-right: -20px;
     z-index: 1;
 }
